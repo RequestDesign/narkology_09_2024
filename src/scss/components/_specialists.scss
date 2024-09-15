@@ -1,0 +1,74 @@
+.specialists {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 5rem;
+            width: 90%;
+
+            & .btn-second {
+                width: fit-content;
+            }
+        }
+
+
+    }
+
+    &__slider {
+        overflow: hidden;
+        width: 100%;
+        margin-top: 4rem;
+        box-sizing: border-box;
+        padding: 3rem 0;
+
+        &-list {
+            height: 53.4rem;
+
+            @include small-tablet {
+                height: 80rem;
+            }
+
+            &-e {
+                border-radius: 3rem;
+                transition: all .5s;
+                &:hover {
+                    box-shadow: 1.6rem 1.4rem 4rem 0px rgba(0, 89, 255, 0.14);
+
+                }
+
+                & a {
+                    position: relative;
+
+                    & img {
+                        border-radius: 3rem;
+                        min-width: 100%;
+                        max-width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        object-position: center;
+
+                    }
+
+                    & .specialists__slider-info {
+                        position: absolute;
+                        bottom: 2rem;
+                        width: calc(100% - 4rem);
+                        left: 2rem;
+                        background-color: $white;
+                        border-radius: 3rem;
+                        box-sizing: border-box;
+                        padding: 2rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        & p:last-of-type {
+                            margin-top: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

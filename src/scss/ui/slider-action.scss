@@ -1,0 +1,60 @@
+.slider-actions {
+  
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+
+  &_mobile {
+    display: none;
+
+    @include small-tablet {
+      margin-top: 6rem;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: fit-content;
+      align-items: center;
+    }
+  }
+
+
+  &-pagin {
+    display: flex;
+    align-items: baseline;
+
+    &-cur {
+      font-family: Euclid Circular A;
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 3.04rem;
+
+      @include small-tablet {
+        font-size: 3.2rem;
+      }
+    }
+
+    &-all {
+      font-family: Euclid Circular A;
+      font-weight: 500;
+      color: $gray;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      &::before{
+        content: '/';
+      }
+
+      @include small-tablet {
+        font-size: 2.9rem;
+      }
+    }
+  }
+
+  &-btns {
+    display: flex;
+    gap: 4rem;
+  }
+
+}

@@ -1,0 +1,148 @@
+.all-types {
+    &__c {
+
+        &-top {
+            display: grid;
+            grid-template-columns: auto 20rem;
+            grid-template-rows: auto auto;
+
+            @include small-tablet {
+                grid-template-columns: 1fr;
+                width: 90%;
+
+            }
+
+            &-link {
+                grid-column: 2;
+                grid-row: 1/ span 2;
+                align-self: flex-end;
+
+                @include small-tablet {
+                    grid-column: 1;
+                    grid-row: 3;
+                    width: fit-content;
+                    margin-top: 5rem;
+
+                }
+            }
+
+        }
+
+        &-items {
+            overflow: hidden;
+            width: 100%;
+            margin-top: 4rem;
+            box-sizing: border-box;
+            padding: 0 3rem;
+            @include small-tablet {
+                padding: 0 ;
+
+            }
+            &-list {
+               
+                padding-bottom: 3rem;
+
+                @include small-tablet {
+                    height: 71.4rem;
+
+                    padding-bottom: 6rem;
+
+                }
+
+                &-e {
+                    position: relative;
+                    display: flex;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        height: 31.3rem;
+                        background-color: $light-blue;
+                        bottom: 0;
+                        left: 0;
+                        border-radius: 3rem;
+                        transition: all .5s;
+
+                    }
+
+                    &:hover {
+
+                        &::after {
+                            box-shadow: 1.6rem 1.4rem 3rem 0px rgba(0, 89, 255, 0.14);
+
+                        }
+
+                        & a .all-types__c-items-list-e-info .all-types__c-items-list-e-info-btn {
+                            & .dd-arrow-icon {
+                                transform: rotate(0);
+                                background-color: $white;
+                                box-shadow: 0.3rem 0.6rem 3rem 0px rgba(0, 89, 255, 0.2);
+                            }
+
+                            & .dd-arrow-icon svg {
+
+                                fill: $blue;
+                            }
+                        }
+                    }
+
+                    a {
+
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1.9rem;
+                        padding-bottom: 2rem;
+                        box-sizing: border-box;
+                    }
+
+                    &-img {
+                        margin-top: auto;
+                        min-width: 27.5rem;
+                        max-width: 39.5rem;
+                        height: 35.2rem;
+
+                        @include small-tablet {
+                            max-width: 90%;
+                            height: 50.4rem;
+
+                        }
+
+                        & img {
+                            max-width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    &-info {
+                        display: grid;
+                        grid-template-columns: auto 7rem;
+                        grid-template-rows: auto auto;
+                        background-color: rgba(255, 255, 255, 0.88);
+                        border-radius: 3rem;
+                        box-sizing: border-box;
+                        padding: 3rem 2rem 3rem 3rem;
+                        gap: 0 1rem;
+
+                        @include small-tablet {
+                            width: calc(100% - 5rem);
+                            margin: auto;
+                            grid-template-columns: auto 8.8rem;
+                        }
+
+                        &-btn {
+                            grid-column: 2;
+                            grid-row: 1 / span 2;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

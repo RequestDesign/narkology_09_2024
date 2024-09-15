@@ -1,0 +1,70 @@
+@import './mixins';
+
+$black: #2D2D33;
+$blue: #4F84E0;
+$white: #ffffff;
+$gray: #656A75;
+$light-blue: #DCE9FF;
+$liner: #5188ED    #306DE5;
+$bg: #ffffff;
+$red: rgba(217, 56, 56, 1);
+
+body {
+  background-color: $bg;
+  color: $black;
+  font-family: 'Geometria';
+
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  // overflow: hidden;
+}
+
+* {
+  // outline:  1px solid red;
+}
+// main
+main {
+  flex-grow: 1;
+
+  section {
+    margin: 20rem 0 0;
+    @include small-tablet {
+      margin: 16rem 0 0;
+    }
+    &._first {
+      margin: 3.2rem 0 0rem;
+      @include small-tablet {
+        margin: 6.4rem 0 0rem;
+      }
+    }
+  }
+}
+
+.desktop {
+  display: block;
+
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media (max-width: 48em) {
+    display: block;
+  }
+}
+
+@import './ui/ui';
+

@@ -1,0 +1,121 @@
+.license {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 5rem;
+            margin-bottom: 8rem;
+
+            & a {
+                width: fit-content;
+            }
+        }
+    }
+
+    &__slider {
+        padding-bottom: 6rem;
+        box-sizing: border-box;
+        padding: 2rem 3rem;
+
+        @include small-tablet {
+            overflow: hidden;
+            padding: 0;
+        }
+
+        &-list {
+            height: 42.8rem;
+            @include small-tablet {
+                height: 62rem;
+            }
+
+            &-e {
+                position: relative;
+                display: grid;
+                cursor: pointer;
+                &:hover .license__slider-list-e-top img{
+                    scale: 1.1;
+
+                }
+                &:hover .license__slider-list-e-footer .license__slider-list-e-footer-icon{
+                    background-color: $white;
+
+                    & svg {
+                        fill: $blue;
+                    }
+                }
+
+
+                &::after {
+
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 28.8rem;
+                    box-shadow: 1rem 1rem 3rem 0px rgba(0, 89, 255, 0.14);
+                    background-color: $white;
+                    border-radius: 3rem;
+                    z-index: -1;
+                    @include small-tablet{
+                        box-shadow: 0px -1px 0px 3px $light-blue inset;
+                    }
+                }
+
+                &-top {
+                    height: 30.2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include small-tablet {
+                        height: 46rem;
+                    }
+
+                    & img {
+                        transition: all .5s;
+                        max-width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                &-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding: 3.2rem;
+
+                    &-icon {
+                        width: 7rem;
+                        height: 7rem;
+                        border-radius: 50%;
+                        box-shadow: 0px .5rem 4rem 0px rgba(0, 89, 255, 0.2);
+                        background-color: $blue;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: all .5s;
+
+                        @include small-tablet {
+                            width: 10rem;
+                            height: 10rem;
+                        }
+
+                        & svg {
+                            transition: all .5s;
+                        }
+
+                       
+
+                    }
+                }
+            }
+        }
+    }
+
+}

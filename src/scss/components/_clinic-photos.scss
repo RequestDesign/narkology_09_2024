@@ -1,0 +1,51 @@
+.clinic-photos {
+    &__head {
+        text-align: center;
+    }
+
+    &__slider {
+        margin-top: 4rem;
+        overflow: hidden;
+
+        @include small-tablet {
+            margin-top: 8rem;
+        }
+
+        &-list {
+
+            height: 60rem;
+            align-items: center;
+
+
+            &-e {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .5s;
+                scale: 0.6;
+
+                @include small-tablet {
+                    scale: 1;
+                }
+
+                & img {
+                    transition: all .5s;
+
+                }
+
+                @include small-tablet {
+                    width: 100%;
+                }
+
+                &_active {
+                    scale: 1.4;
+
+                    @include small-tablet {
+                        scale: 1;
+                    }
+                }
+            }
+
+        }
+    }
+}

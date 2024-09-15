@@ -1,0 +1,70 @@
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    &-el {
+        padding-bottom: 1.2rem;
+        border-bottom: 2px solid $blue;
+        color: $black;
+
+        &::placeholder {
+            color: rgba(124, 145, 177, 1);
+        }
+
+        &.form-input-error {
+            border-bottom: 2px solid $red;
+        }
+
+    }
+
+    &-error {
+        color: $red;
+    }
+
+}
+
+.form-check {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    &-input {
+        opacity: 0;
+        position: absolute;
+
+        &:checked+.form-check-icon {
+            border-color: $blue;
+        }
+
+        &:checked+.form-check-icon svg {
+            opacity: 1;
+        }
+    }
+
+    &-icon {
+        border: 2px solid $gray;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include small-tablet {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        & svg {
+            opacity: 0;
+            width: 80%;
+            height: 50%;
+
+           
+        }
+
+    }
+}

@@ -1,0 +1,50 @@
+.price {
+    margin-left: auto;
+    display: flex;
+    gap: 0.3rem;
+  
+    grid-column: 1;
+    grid-row: 2;
+
+    @include small-tablet {
+        margin-right: auto;
+        margin-left: 0;
+
+    }
+
+    &-context {
+        color: $gray;
+        font-family: Gilroy;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.5rem;
+        align-self: flex-end;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+        }
+    }
+
+    &-data {
+        font-family: Euclid Circular A;
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 4.8rem;
+        display: flex;
+        align-items: flex-start;
+
+        @include small-tablet {
+            font-size: 5.8rem;
+            line-height: 6rem;
+        }
+
+        &::after {
+            content: '₽';
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 3rem;
+
+        }
+    }
+}

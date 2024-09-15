@@ -1,0 +1,109 @@
+.footer {
+    border-top: 0.4rem solid $light-blue;
+    padding: 6rem 0;
+    margin-top: 16rem;
+
+    &__c {
+        display: grid;
+        grid-template-columns: repeat(4, calc(25% - 3.5rem));
+        grid-template-rows: auto auto;
+        gap: 7rem 3.5rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto;
+        }
+
+        &-e {
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+
+            &_mobile{
+                @include small-tablet {
+                    grid-column: 1 / span 2;
+                }   
+            }
+            &-logo {
+                width: 21.6rem;
+                height: 6.6rem;
+
+                @include small-tablet {
+                    width: 34rem;
+                    height: 10rem;
+                   
+                }
+            }
+
+            &-link {
+                &:hover {
+                    color: $blue;
+                }
+            }
+
+            &-call {
+                display: flex;
+                gap: 1rem;
+
+                &-icon {
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $blue;
+
+                    & img {
+                        width: 50%;
+                        height: 50%;
+                    }
+
+                }
+            }
+
+            &-items {
+                transition: grid .5s;
+               
+                @include small-tablet {
+                   display: grid;
+                   grid-template-rows: min-content 0fr;
+                }
+                &._opened{
+                    
+                    @include small-tablet {
+                        grid-template-rows: min-content 1fr;
+                        & .footer__c-e-items-btn img{
+                            transform: rotate(180deg);
+                        }
+                     }
+                }
+                
+                &-btn {
+                    margin-bottom: 2.8rem;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    transition: all .5s;
+
+                    & img {
+                        width: 3rem;
+                        height: 3rem;
+                        display: none;
+
+                        @include small-tablet {
+                            display: block;
+                        }
+                    }
+                }
+
+                &-list {
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+}
