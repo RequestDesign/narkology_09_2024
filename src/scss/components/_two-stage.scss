@@ -1,0 +1,136 @@
+.two-stage {
+
+    &__c {
+        & .tl1{
+            @include small-tablet{
+                font-size: 7rem;
+            }
+        }
+
+        &-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40rem;
+            gap: 3.5rem;
+            margin-top: 4rem;
+
+            @include small-tablet {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            &-e {
+                position: relative;
+                border-radius: 3rem;
+                overflow: hidden;
+                padding: 4rem;
+
+                @include small-tablet {
+                    background-color: $light-blue;
+                }
+
+                &:hover {
+                    & .two-stage__c-items-e-bottom {
+                        opacity: 1;
+                    }
+
+                    & .two-stage__c-items-e-top {
+                        color: $blue;
+                    }
+                }
+
+                &-img {
+                    position: absolute;
+                    z-index: 1;
+                    min-width: calc(100% + 6rem);
+                    min-height: calc(100% + 6rem);
+                    object-fit: cover;
+                    object-position: center;
+                    top: 0;
+                    left: 0;
+
+                    @include small-tablet {
+                        display: none;
+                    }
+                }
+
+                &-top {
+                    top: 3rem;
+                    left: 3rem;
+                    width: calc(100% - 6rem);
+                    position: absolute;
+                    z-index: 3;
+                    display: flex;
+                    align-items: center;
+                    gap: 4rem;
+                    color: $white;
+                    transition: color .5s;
+
+                    @include small-tablet {
+                        top: 0;
+                        left: 0;
+                        position: relative;
+                        width: 100%;
+                        color: $blue;
+                    }
+
+                    &-count {
+                        border: .2rem solid $white;
+                        border-radius: 50%;
+                        background-color: $blue;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        width: 8rem;
+                        height: 8rem;
+                        color: $white !important;
+                    }
+                }
+
+                &-bottom {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    transition: opacity .5s;
+                    background-color: $light-blue;
+                    box-sizing: border-box;
+                    padding: 4rem 4rem 4rem;
+                    display: flex;
+
+                    @include small-tablet {
+                        opacity: 1;
+                        position: relative;
+                        padding: 0;
+                        height: auto;
+
+                    }
+
+                    &-list {
+                        margin-top: auto;
+                     
+                        @include small-tablet{
+                            margin-top: 4rem;
+                        }
+
+                       
+                    }
+
+                    &-bg {
+                        position: absolute;
+                        right: 71%;
+                        top: -131%;
+                        @include small-tablet {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

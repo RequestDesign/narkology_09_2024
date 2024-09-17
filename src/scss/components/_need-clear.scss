@@ -1,0 +1,17 @@
+.need-clear {
+
+    &__c {
+        display: grid;
+        grid-template-columns: auto 47rem;
+        gap: 3.5rem;
+        margin-top: 4rem;
+        @include small-tablet{
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        &-right{
+
+        }
+    }
+}

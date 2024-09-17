@@ -2,25 +2,48 @@
     &__c {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 42.4rem;
+        min-height: 42.7rem;
         box-shadow: 2.6rem 2.4rem 8rem 0px rgba(0, 89, 255, 0.14);
         border-radius: 3rem;
-        @include small-tablet{
+
+        @include small-tablet {
             grid-template-columns: 1fr;
+        }
+
+        &_rev {
+            grid-template-columns: 1fr .7fr;
+
+            & .fulltime-banner__c-img {
+
+                & img {
+                    @include small-tablet {
+                        transform: translateX(-5rem);
+
+                    }
+                }
+            }
+
+
         }
 
         &-img {
             border-radius: 3rem 0 0 3rem;
             overflow: hidden;
-            @include small-tablet{
+
+            @include small-tablet {
                 border-radius: 6rem 6rem 100rem 100rem;
+                grid-row: 1;
+                height: 44.4rem;
             }
+
             & img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
-                @include small-tablet{
+
+
+                @include small-tablet {
                     width: 120%;
+                    object-fit: cover;
                 }
             }
         }
@@ -32,19 +55,23 @@
             display: flex;
             flex-direction: column;
             gap: 3.2rem;
-            @include small-tablet{
-                padding: 3.2rem;
+
+            @include small-tablet {
+                padding: 5rem 3.2rem 3.2rem;
                 gap: 6.4rem;
             }
+
             &-bottom {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                @include small-tablet{
-                   flex-direction: column-reverse;
-                   align-items: flex-start;
-                   gap: 2rem;
+
+                @include small-tablet {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    gap: 2rem;
                 }
+
                 & a {
                     display: flex;
                     gap: 1rem;
@@ -57,4 +84,6 @@
             }
         }
     }
+
+
 }

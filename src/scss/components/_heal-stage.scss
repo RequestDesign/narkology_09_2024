@@ -1,0 +1,157 @@
+.heal-stage {
+    &__c {
+        & .tl1 {
+            text-align: center;
+            margin-bottom: 4rem;
+
+            @include small-tablet {
+                text-align: left;
+            }
+        }
+
+        &-top {
+            display: grid;
+            grid-template-columns: repeat(3, 36rem);
+            grid-template-rows: auto auto;
+            gap: 1.2rem 6rem;
+            justify-content: center;
+
+            @include small-tablet {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+
+                margin-top: 8rem;
+
+            }
+
+            &-btn {
+                text-align: center;
+
+                @include small-tablet {
+                    text-align: left;
+
+                }
+
+                &_active {
+                    color: $blue;
+                }
+            }
+
+
+
+            &-indication {
+                grid-column: 1 / span 3;
+                grid-row: 2;
+                background-color: $light-blue;
+                height: 0.5rem;
+                display: flex;
+
+                @include small-tablet {
+                    display: none;
+                }
+
+
+                &-line {
+                    display: block;
+                    height: 100%;
+                    background-color: $blue;
+                    width: 33%;
+                    transition: all .5s;
+                }
+            }
+
+        }
+
+        &-slider {
+            margin-top: 4rem;
+
+            @include small-tablet {
+                margin-top: 8rem;
+            }
+
+            &-list {
+                &-slide {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.5rem;
+
+                    &-e {
+                        display: grid;
+                        width: 100%;
+                        grid-template-rows: min-content 0fr;
+                        transition: all .5s;
+
+                        &._opened {
+                            grid-template-rows: min-content 1fr;
+                        }
+
+                        &-target {
+                            justify-content: space-between;
+                            background-color: $light-blue;
+                            padding: 2rem;
+                            box-sizing: border-box;
+                            border-radius: 3rem;
+
+                            &-left {
+                                display: flex;
+                                align-items: center;
+                                gap: 2rem;
+
+                                @include small-tablet {
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    grid-template-rows: auto auto;
+                                    gap: 0 2rem;
+                                }
+
+                                &-icon {
+                                    width: 8rem;
+                                    height: 8rem;
+                                    border-radius: 50%;
+                                    border: .2rem solid $white;
+                                    background-color: $blue;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-right: 2rem;
+
+                                    @include small-tablet {
+                                        grid-column: 1;
+                                        grid-row: 1 / span 2;
+                                    }
+
+                                    & img {
+                                        width: 50%;
+                                        height: 50%;
+                                    }
+                                }
+                            }
+                        }
+
+                        &-bottom {
+                            height: 100%;
+                            overflow: hidden;
+
+                            &-c {
+                                margin-top: 3.2rem;
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                justify-content: center;
+                                gap: 3.5rem;
+                                padding: 0 14rem;
+
+                                @include small-tablet {
+                                    grid-template-columns: 1fr;
+                                    gap: 1.6rem;
+                                    padding: 0 3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}

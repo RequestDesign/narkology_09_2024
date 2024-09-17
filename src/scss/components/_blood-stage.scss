@@ -1,0 +1,66 @@
+.blood-stage {
+    &__c {
+        display: grid;
+        grid-template-columns: 1fr .8fr;
+        grid-template-rows: auto auto;
+        gap: 4rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+        }
+
+
+        &-nav {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: min-content min-content;
+            gap: 0 6rem;
+            grid-column: 1 / span 2;
+            width: fit-content;
+
+            @include small-tablet {
+                grid-column: 1;
+            }
+
+            &-btn {}
+
+            &-indication {
+                grid-column: 1 / span 2;
+                height: .4rem;
+                display: flex;
+                margin-top: 1.2rem;
+                background-color: $light-blue;
+
+                &-line {
+                    transition: margin .5s;
+                    width: calc(50% - 3rem);
+                    height: 100%;
+                    background-color: $blue;
+                }
+            }
+
+        }
+
+        &-slider {
+            width: 100%;
+
+            &-list {
+                &-e {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+
+                    &-footer {
+                        margin-top: auto;
+                        width: 100%;
+                       
+
+                       
+                    }
+                }
+            }
+        }
+
+    }
+}

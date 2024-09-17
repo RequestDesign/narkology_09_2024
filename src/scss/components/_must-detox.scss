@@ -1,0 +1,30 @@
+.must-detox {
+    &__c {
+        display: grid;
+        grid-template-columns: 47rem auto;
+        gap: 3.5rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
+
+        &-left {}
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            @include small-tablet {
+                gap: 3rem;
+                grid-row: 1;
+            }
+
+            & .tl1 {
+                margin-bottom: 3rem;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,81 @@
+.service-heading {
+    background-image: url(../../assets/images/heading-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 0;
+    padding-top: 17rem;
+
+    &__c {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            gap: 8rem;
+        }
+
+        &-left {
+            padding: 9rem 10rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+
+            @include small-tablet {
+                gap: 5.6rem;
+                padding: 0;
+            }
+
+            & .tl1 span {
+                text-decoration: underline;
+            }
+
+            & .txt24 {
+                max-width: 70%;
+
+                @include small-tablet {
+                    max-width: 100%;
+                }
+            }
+
+            &-footer {
+                margin-top: 2rem;
+                display: flex;
+                gap: 3.2rem;
+                align-items: center;
+
+                @include small-tablet {
+                    margin-top: 2.5rem;
+                    gap: 3rem;
+                }
+
+                &-price {
+                    padding: 2.8rem 4.4rem;
+                    box-sizing: border-box;
+                    border-radius: 3rem;
+                    border: .2rem solid $blue;
+
+                   @include small-tablet{
+                    padding: 1rem 5rem;
+                   }
+                }
+            }
+        }
+
+        &-right {
+            width: 100%;
+            height: 63.6rem;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include small-tablet{
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+}

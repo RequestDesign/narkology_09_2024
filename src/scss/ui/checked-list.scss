@@ -1,0 +1,39 @@
+.checked-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+
+    &__e {
+        display: flex;
+        gap: .4rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        
+
+        &-img {
+            padding: 3rem 2rem;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $light-blue;
+
+            & img {
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+
+        }
+
+        &-text {
+            width: 100%;
+            padding: 3rem 2rem;
+            box-sizing: border-box;
+            background-color: $light-blue;
+
+        }
+    }
+
+
+}

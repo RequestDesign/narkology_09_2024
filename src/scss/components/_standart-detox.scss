@@ -1,0 +1,66 @@
+.standart-detox {
+    &__c {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3.2rem;
+        margin-top: 4rem;
+
+        @include small-tablet {
+            margin-top: 8rem;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 1fr;
+        }
+
+        &-e {
+            position: relative;
+            border-radius: 3rem;
+            overflow: hidden;
+            padding: 3.6rem 3.6rem;
+            box-sizing: border-box;
+
+            @include small-tablet {
+                padding: 22.4rem 3.6rem 3.6rem;
+            }
+
+
+            &-text {
+                background-color: $white;
+                border-radius: 3rem;
+                width: 38rem;
+                height: 13rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.2rem;
+                position: relative;
+                z-index: 2;
+                padding-left: 3.2rem;
+
+                @include small-tablet {
+                    height: 15.6rem;
+                    width: 100%;
+                }
+
+            }
+
+            &-img {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                display: flex;
+
+                & img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                    object-position: bottom;
+
+                }
+            }
+        }
+    }
+}

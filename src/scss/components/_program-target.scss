@@ -1,0 +1,37 @@
+.program-target {
+
+    &__slider {
+        margin-top: 4rem;
+
+        &-list {
+            &-e {
+                border-radius: 3rem;
+                border: 0.4rem solid $blue;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 3.2rem;
+                box-sizing: border-box;
+                gap: 4rem;
+                height: unset;
+
+                @include small-tablet {
+                    gap: 3rem;
+                }
+
+                &-count {
+                    width: 8rem;
+                    height: 8rem;
+                    border-radius: 0.2rem solid $white;
+                    background-color: $blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white;
+                    border-radius: 50%;
+
+                }
+            }
+        }
+    }
+}

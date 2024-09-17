@@ -6,6 +6,7 @@ import { rem } from "../utils/constants";
 
 
 
+
 $(function () {
     /* drop-down */
     const ddBtn = $('.drop-down-target'),
@@ -13,7 +14,7 @@ $(function () {
         ddOpened = '_opened'
 
 
-    ddBtn.on('click', (e) => {
+    ddBtn && ddBtn.on('click', (e) => {
         e.preventDefault()
         e.currentTarget.classList.toggle(ddOpened)
         e.currentTarget.closest(ddParent)
@@ -21,13 +22,16 @@ $(function () {
     })
     /* drop-down */
     swipersInit()
+    healStageSwiper()
+    bloodStageSwiper()
+    feedBackOpenReview()
 
 
 });
 
 function swipersInit() {
     /*  */
-    new Swiper('.main-heading__c-right-slider-wrp',
+    document.querySelector('.main-heading__c-right-slider-wrp') && new Swiper('.main-heading__c-right-slider-wrp',
         {
             modules: [Navigation, Pagination],
             loop: false,
@@ -48,7 +52,7 @@ function swipersInit() {
         }
     )
     /*  */
-    new Swiper('.all-types__c-items',
+    document.querySelector('.all-types__c-items') && new Swiper('.all-types__c-items',
         {
             modules: [Navigation, Pagination],
             loop: false,
@@ -77,7 +81,7 @@ function swipersInit() {
         }
     )
     /*  */
-    new Swiper('.four-stage__c-items',
+    document.querySelector('.four-stage__c-items') && new Swiper('.four-stage__c-items',
         {
             modules: [Navigation, Pagination],
             loop: false,
@@ -103,7 +107,7 @@ function swipersInit() {
         }
     )
     /*  */
-    new Swiper('.placement__c-items',
+    document.querySelector('.placement__c-items') && new Swiper('.placement__c-items',
         {
             modules: [Navigation, Pagination],
             loop: false,
@@ -124,7 +128,7 @@ function swipersInit() {
         }
     )
     /*  */
-    new Swiper('.specialists__slider',
+    document.querySelector('.specialists__slider') && new Swiper('.specialists__slider',
         {
             modules: [Navigation, Pagination],
             loop: false,
@@ -153,7 +157,7 @@ function swipersInit() {
         }
     )
     /*  */
-    new Swiper('.clinic-photos__slider',
+    document.querySelector('.clinic-photos__slider') && new Swiper('.clinic-photos__slider',
         {
             modules: [Navigation, Pagination],
             loop: false,
@@ -184,14 +188,12 @@ function swipersInit() {
         }
     )
     /*  */
-    new Swiper('.feedback__slider',
+    document.querySelector('.feedback__slider') && new Swiper('.feedback__slider',
         {
             modules: [Navigation, Pagination],
             loop: false,
             slidesPerView: 1,
-            initialSlide: 1,
             spaceBetween: rem(2),
-            autoHeight: true,
             breakpoints: {
                 768: {
                     slidesPerView: 2,
@@ -211,12 +213,11 @@ function swipersInit() {
         }
     )
     /*  */
-    new Swiper('.license__slider',
+    document.querySelector('.license__slider') && new Swiper('.license__slider',
         {
             modules: [Navigation, Pagination],
             loop: false,
             slidesPerView: 1,
-            initialSlide: 1,
             spaceBetween: rem(2),
             autoHeight: true,
             breakpoints: {
@@ -237,7 +238,162 @@ function swipersInit() {
 
         }
     )
+    /*  */
+    document.querySelector('.program-target__slider') && new Swiper('.program-target__slider',
+        {
+            modules: [Navigation, Pagination],
+            loop: false,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: rem(3),
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+
+                }
+            },
+            pagination: {
+                el: '.program-targe__nav-pagin',
+                type: "fraction",
+                currentClass: 'slider-actions-pagin-cur',
+                totalClass: 'slider-actions-pagin-all'
+            },
+            navigation: {
+                prevEl: '.program-targe__nav-prev',
+                nextEl: '.program-targe__nav-next'
+            },
+
+        }
+    )
 }
 
+function healStageSwiper() {
+    if (!document.querySelector('.heal-stage')) return
+
+    const swiper = new Swiper('.heal-stage__c-slider',
+        {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: rem(2),
+        }
+    )
+    const btns = document.querySelectorAll('.heal-stage__c-top-btn')
+    const indicationLine = document.querySelector('.heal-stage__c-top-indication-line')
+    btns.forEach((el) =>
+        el.addEventListener('click', (e) => {
+            const { slideto } = e.currentTarget.dataset
+            swiper.slideTo(slideto)
+
+
+        })
+    )
+    swiper.on('activeIndexChange', (e) => {
+        indication(e.realIndex)
+    })
+
+    function indication(index) {
+        btns.forEach((el) => {
+            el.classList.remove('heal-stage__c-top-btn_active')
+        })
+        btns[index].classList.add('heal-stage__c-top-btn_active')
+        if (index == 0) {
+            indicationLine.style.marginLeft = '0'
+        } else if (index == 1) {
+            indicationLine.style.marginLeft = '33%'
+        } else {
+            indicationLine.style.marginLeft = '67%'
+
+
+        }
+    }
+}
+
+function bloodStageSwiper() {
+    if (!document.querySelector('.blood-stage')) return
+
+    const swiper = new Swiper('.blood-stage__c-slider',
+        {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: rem(2),
+        }
+    )
+
+    const btns = document.querySelectorAll('.blood-stage__c-nav-btn')
+    const indicationLine = document.querySelector('.blood-stage__c-nav-indication-line')
+    btns.forEach((el) =>
+        el.addEventListener('click', (e) => {
+            const { slideto } = e.currentTarget.dataset
+            swiper.slideTo(slideto)
+
+
+        })
+    )
+    swiper.on('activeIndexChange', (e) => {
+        indication(e.realIndex)
+    })
+
+    function indication(index) {
+        btns.forEach((el) => {
+            el.classList.remove('blood-stage__c-nav-btn')
+        })
+        btns[index].classList.add('blood-stage__c-nav-btn')
+        if (index == 0) {
+            indicationLine.style.marginLeft = '0'
+        } else {
+            indicationLine.style.marginLeft = 'calc(50% + 3rem)'
+        }
+    }
+}
+
+function feedBackOpenReview() {
+    if (!document.querySelector('.feedback__slider-list-e-body-c-txt')) return
+
+    
+    const container = $('.feedback__slider-list'),
+        textSelector = '.feedback__slider-list-e-body-c-txt',
+        text = $(textSelector).toArray(),
+        textContainerSelector = '.feedback__slider-list-e-body-c',
+        shortenedTextSelecor = 'feedback__slider-list-e-body-c-txt_closed'
+
+    const maxHeight = 150
+    text.forEach((e) => {
+        if (e.offsetHeight > maxHeight) {
+            e = $(e)
+            e.addClass(shortenedTextSelecor)
+            e.closest(textContainerSelector)
+                .append('<button class="feedback__slider-list-e-body-c-more txt18 "> еще</button>')
+        }
+
+    })
+
+    container.on('click', (ev) => {
+        if (!ev.target.classList.contains('feedback__slider-list-e-body-c-more')) return
+
+        if (!ev.target.closest(textContainerSelector).classList.contains('_opened')) {
+            const parent = ev.target.closest(textContainerSelector)
+            parent.classList.add('_opened')
+            parent.querySelector(textSelector)
+                .classList.remove(shortenedTextSelecor)
+            ev.target.textContent = 'скрыть'
+
+
+        } else {
+            const parent = ev.target.closest(textContainerSelector)
+            parent.classList.remove('_opened')
+            parent.querySelector(textSelector)
+                .classList.add(shortenedTextSelecor)
+            ev.target.textContent = 'еще'
+        }
+
+
+
+    })
+
+
+
+}
 
 

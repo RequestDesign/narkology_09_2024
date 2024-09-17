@@ -82,8 +82,8 @@
         height: 5.6rem;
 
         & svg {
-            width: 4rem;
-            height: 4rem;
+            width: 50%;
+            height: 50%;
         }
     }
 
@@ -97,6 +97,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink:0 ;
 
         @include small-tablet {
             width: 8.8rem;
@@ -131,7 +132,7 @@
         }
     }
 
-    &_opened {
+    &._opened {
         & .dd-arrow-icon {
             transform: rotate(0);
             background-color: $white;

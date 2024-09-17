@@ -23,9 +23,9 @@
 
         &-list {
 
-    
 
-            @include small-tablet{
+
+            @include small-tablet {
                 grid-template-columns: repeat(4, calc(100% - 3.5rem));
             }
 
@@ -52,8 +52,29 @@
                     &-c {
                         padding: 1.2rem 4rem 4rem;
                         box-sizing: border-box;
+
+
+
                         &-txt {
-                            
+
+                            &_closed {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -moz-box;
+                                -moz-box-orient: vertical;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 8;
+                                -webkit-box-orient: vertical;
+                                line-clamp: 8;
+                                box-orient: vertical;
+                            }
+                        }
+
+                        &._opened {
+                            & .feedback__slider-list-e-body-c-txt {
+                                -webkit-line-clamp: 400;
+                                line-clamp: 400;
+                            }
                         }
 
                         &-more {

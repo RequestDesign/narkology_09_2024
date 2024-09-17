@@ -1,0 +1,28 @@
+.marked-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    &-e {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        @include small-tablet {
+            align-items: flex-start;
+        }
+
+        & img {
+            width: .6rem;
+            height: .6rem;
+            flex-shrink: 0;
+
+            @include small-tablet {
+                margin-top: 1rem;
+                width: 1rem;
+                height: 1rem;
+            }
+
+        }
+    }
+}

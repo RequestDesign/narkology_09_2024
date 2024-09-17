@@ -1,0 +1,114 @@
+.faq {
+
+    &__c {
+        display: grid;
+        grid-template-columns: 47rem auto;
+        gap: 3.5rem;
+        margin-top: 4rem;
+        @include small-tablet{
+            grid-template-columns: 1fr;
+            margin-top: 8rem;
+        }
+
+        &-left {
+            height: fit-content;
+            position: sticky;
+            top: 13rem;
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+            border-radius: 3rem;
+            overflow: hidden;
+            @include small-tablet{
+                grid-row: 2;
+            }
+
+            &-top {
+                padding: 3.2rem;
+                box-sizing: border-box;
+                display: flex;
+                background-color: $light-blue;
+
+                flex-direction: column;
+                gap: 3.2rem;
+
+                &-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+
+                    &-e {
+                        display: flex;
+                        gap: 1.6rem;
+                        align-items: center;
+
+                        & img {
+                            width: 3.8rem;
+                            height: 3.8rem;
+                        }
+                    }
+                }
+            }
+
+            &-bottom {
+                padding: 3.2rem;
+                box-sizing: border-box;
+                display: flex;
+                background-color: $light-blue;
+
+                & button {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+
+            &-e {
+                display: grid;
+                grid-template-rows: min-content 0fr;
+                transition: all .5s;
+                overflow: hidden;
+
+                &._opened {
+                    grid-template-rows: min-content 1fr;
+                }
+
+                &-target {
+                    box-sizing: border-box;
+                    padding: 3.2rem;
+
+                    background-color: $light-blue;
+                    border-radius: 3rem;
+                    justify-content: space-between;
+                    & .dd-arrow-text{
+                        max-width: 50%;
+                        @include small-tablet{
+                            max-width: 100%;
+                        }
+                    }
+
+                }
+
+                &-content {
+                    overflow: hidden;
+
+
+
+                    &-data {
+                        margin:2.5rem;
+                        box-sizing: border-box;
+                        padding: 3.2rem;
+                        background-color: $white;
+                        box-shadow: 1rem 1rem 2.5rem 0px rgba(0, 89, 255, 0.14);
+                        border-radius: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
