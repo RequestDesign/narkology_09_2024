@@ -6,13 +6,15 @@
 
     color: $white;
     text-align: center;
-    transition: all .5s;
+    transition: background-color .5s, box-shadow .5s;
 
     background-color: rgba(81, 136, 237, 1);
     -webkit-box-shadow: 0px -14px 18px -9px rgba(48, 109, 229, 1) inset;
     -moz-box-shadow: 0px -14px 18px -9px rgba(48, 109, 229, 1) inset;
     box-shadow: 0px -14px 18px -9px rgba(48, 109, 229, 1) inset;
-
+&:disabled{
+    background-color: $light-blue;
+}
 
     &:hover {
         background-color: $blue;
@@ -36,8 +38,7 @@
 
     color: $blue;
     text-align: center;
-    transition: all .5s;
-
+    transition: background-color .5s, box-shadow .5s;
     background-color: transparent;
 
     &-icon {

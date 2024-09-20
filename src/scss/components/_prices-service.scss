@@ -1,0 +1,122 @@
+.prices-service {
+    margin-top: 6.5rem;
+
+    @include small-tablet {
+        margin-top: 4rem;
+    }
+
+    &__c {
+        display: grid;
+        grid-template-columns: 52rem auto;
+        gap: 3.5rem;
+        margin-top: 4rem;
+
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            margin-top: 8rem;
+
+        }
+
+        &-left {
+            border-radius: 3rem;
+            box-shadow: 1.6rem 1.4rem 6rem 0px rgba(0, 89, 255, 0.14);
+            background-color: $white;
+            position: relative;
+            height: fit-content;
+
+            @include small-tablet {
+                &._opened {
+                    & .prices-service__c-left-items {
+                        max-height: 200vh;
+                    }
+                }
+            }
+
+
+            &-btn {
+                display: none;
+
+                @include small-tablet {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding: 3rem;
+                    box-sizing: border-box;
+                    transition:  transform .5s;
+
+                    & img {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+
+                    &._opened {
+                        & img {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+
+            &-items {
+                @include small-tablet {
+                    position: absolute;
+                    top: 75%;
+                    width: 100%;
+                    border-radius: 0 0 3rem 3rem;
+                    left: 0;
+                    overflow: hidden;
+                    max-height: 0;
+                    z-index: 11;
+                    background-color: $white;
+                    transition: max-height .5s;
+
+                }
+
+                &-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    padding: 3rem;
+                    box-sizing: border-box;
+
+                    @include small-tablet {
+                        margin-top: 2.2rem;
+                    }
+
+                    &-e {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.2rem;
+                        cursor: pointer;
+                        width: fit-content;
+
+                        &-line {
+                            width: 0;
+                            height: 4px;
+                            background-color: $blue;
+                            transition: all .5s;
+                        }
+
+                        &._opened {
+                            color: $blue;
+
+                            & .prices-service__c-left-items-list-e-line {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+        }
+
+        &-right {
+            width: 100%;
+        }
+    }
+}

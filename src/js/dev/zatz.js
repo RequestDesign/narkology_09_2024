@@ -2,15 +2,39 @@ import $ from "jquery";
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import { rem } from "../utils/constants";
-
+import Form from "../utils/forms";
+import Inputmask from "inputmask";
 
 
 
 
 $(function () {
-    /* drop-down */
-    const ddBtn = $('.drop-down-target'),
-        ddParent = '.drop-down-container',
+    dropDowns()
+    swipersInit()
+    healStageSwiper()
+    bloodStageSwiper()
+    feedBackOpenReview()
+    modalsOpenHandler()
+    priceServiceSwiper()
+
+    const forms = document.querySelectorAll('.form')
+    if (forms) {
+        forms.forEach((e) => {
+            new Form(e, formSubmit)
+            new Inputmask('+7 (999) 999-99-99')
+                .mask($(e).find('.form-input-txt-el[name="phone"]'));
+
+        })
+    }
+
+
+});
+
+function dropDowns() {
+    const ddBtn = $('.drop-down-target')
+    if (!ddBtn) return
+
+    const ddParent = '.drop-down-container',
         ddOpened = '_opened'
 
 
@@ -20,14 +44,9 @@ $(function () {
         e.currentTarget.closest(ddParent)
             .classList.toggle(ddOpened)
     })
-    /* drop-down */
-    swipersInit()
-    healStageSwiper()
-    bloodStageSwiper()
-    feedBackOpenReview()
 
+}
 
-});
 
 function swipersInit() {
     /*  */
@@ -269,6 +288,7 @@ function swipersInit() {
     )
 }
 
+
 function healStageSwiper() {
     if (!document.querySelector('.heal-stage')) return
 
@@ -310,6 +330,7 @@ function healStageSwiper() {
     }
 }
 
+
 function bloodStageSwiper() {
     if (!document.querySelector('.blood-stage')) return
 
@@ -348,11 +369,56 @@ function bloodStageSwiper() {
     }
 }
 
+
+function priceServiceSwiper() {
+    const target = document.querySelector('.prices-service__c-right')
+    if (!target) return
+
+    const swiper = new Swiper(target,
+        {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: rem(2),
+        }
+    )
+
+
+    const navContainer = document.querySelector('.prices-service__c-left')
+    const btns = navContainer.querySelectorAll('.prices-service__c-left-items-list-e')
+    const mobileDD = navContainer.querySelector('.prices-service__c-left-btn')
+    const mobileDDText = mobileDD.querySelector('span')
+
+    btns.forEach((el) =>
+        el.addEventListener('click', (e) => {
+            const { slideto } = e.currentTarget.dataset
+            swiper.slideTo(slideto)
+            indication(slideto)
+
+        })
+    )
+
+    swiper.on('activeIndexChange', (e) => {
+        indication(e.realIndex)
+        mobileDD.classList.remove('_opened')
+        navContainer.classList.remove('_opened')
+        mobileDDText.textContent = btns[e.realIndex].textContent
+    })
+
+    function indication(index) {
+        index = Number(index)
+        btns.forEach((el) => {
+            el.classList.remove('_opened')
+        })
+        btns[index].classList.add('_opened')
+
+    }
+}
+
+
 function feedBackOpenReview() {
     if (!document.querySelector('.feedback__slider-list-e-body-c-txt')) return
 
-    
-    const container = $('.feedback__slider-list'),
+    const container = $('.feedback-container'),
         textSelector = '.feedback__slider-list-e-body-c-txt',
         text = $(textSelector).toArray(),
         textContainerSelector = '.feedback__slider-list-e-body-c',
@@ -395,5 +461,63 @@ function feedBackOpenReview() {
 
 
 }
+
+
+function modalsOpenHandler() {
+
+    const modalOpeners = $('.modal-opener')
+    const modalClosers = $('.modal-closer')
+
+    if (!modalOpeners || !modalClosers) return
+
+    modalOpeners.on('click', (ev) => {
+        const { modal } = ev.currentTarget.dataset
+
+        $(`.modal-${modal}`)
+            .fadeIn()
+            .addClass('_opened')
+
+    })
+
+
+    modalClosers.on('click', (ev) => {
+        const { classList } = ev.target
+        if (!classList.contains('modal-closer')) return
+
+        if (classList.contains('modal')) {
+            $(ev.target).fadeOut().removeClass('_opened')
+
+        } else {
+            $(ev.target.closest('.modal')).fadeOut().removeClass('_opened')
+
+        }
+    })
+
+
+
+
+    /* const openBtns = $('.open-modal-call'),
+        modalSendCall = document.querySelector('.modal_send-call'),
+        allModals = $('.modal')
+    if (!openBtns || modalSendCall) return
+
+    openBtns.on('click', (ev) => {
+        if (!modalSendCall.classList.contains('_opened')) {
+            modalSendCall.classList.add('_opened')
+        }
+    })
+
+    allModalsCloser.on('click', (ev) => {
+        console.log(ev);
+    })
+ */
+}
+
+function formSubmit(inputsData) {
+    console.log(inputsData);
+    $('.modal-send-call').fadeOut().removeClass('_opened')
+    $('.modal-success').fadeIn().addClass('_opened')
+}
+
 
 

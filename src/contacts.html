@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <main>
+            <section class="path">
+                <div class="container path__list">
+                    <a href="#" class="path__list-e txt18">Главная</a>
+                    <a href="#" class="path__list-e path__list-e_curr txt18">Текущая</a>
+                </div>
+            </section>
+            <div class="disable-margin">
+                <include src="./components/_contacts.html"></include>
+            </div>
+            <section class="about-business">
+                <div class="container about-business__c">
+                    <div class="about-business__c-left">
+                        <h2 class="tl1">Данные об организации</h2>
+                        <ul class="about-business__c-left-list">
+                            <li class="about-business__c-left-list-e">
+                                <p class="txt24 txt24_bold">ФИО генерального директора:</p>
+                                <p class="txt20">г. Ростов-на-Дону, ул. Днепростроевская 118/43</p>
+                            </li>
+                            <li class="about-business__c-left-list-e">
+                                <p class="txt24 txt24_bold">мало</p>
+                                <p class="txt20">текста</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-business__c-right">
+                        <img src="./assets/images/clinic-photo.webp" alt="clinic">
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <include src="./components/_footer.html"></include>
+        <include src="./components/_modal-send.html"></include>
+        <include src="./components/_modal-thx.html"></include>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=baf2c816-f3bd-4189-98d8-72b7e716c191&lang=ru_RU"
+        type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [47.204572074287015, 39.67028549999995],
+                zoom: 16,
+                controls: ['fullscreenControl']
+            });
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'there is no palce for narkomany 😎'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './assets/images/icons/map-marker.svg',
+                iconImageSize: [50, 50],
+
+            }),
+                myMap.geoObjects
+                    .add(myPlacemark)
+        }
+    </script>
+</body>
+
+</html>

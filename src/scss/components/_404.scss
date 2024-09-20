@@ -1,0 +1,50 @@
+.not-found {
+
+    &__c {
+        display: grid;
+        grid-template-columns: auto 85rem;
+        gap: 13.4rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            gap: 5rem;
+        }
+
+        &-left {
+            & p.txt24{
+                text-transform: uppercase;
+            }
+
+            & .tl1 {
+                margin: 6.5rem 0 3.5rem;
+
+                @include small-tablet {
+                    margin: 4rem 0 3.5rem;
+                }
+            }
+            &-links{
+                display: flex;
+                gap: 2rem;
+                @include small-tablet{
+                    flex-direction: column;
+                    & a{
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+        &-right{
+            height: 43.2rem;
+            border-radius: 3rem;
+            overflow: hidden;
+            display: flex;
+            & img{
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+
+            }
+        }
+    }
+
+}

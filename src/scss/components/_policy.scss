@@ -1,0 +1,28 @@
+.policy {
+    margin-top: 6rem;
+
+    &__c {
+        display: flex;
+        flex-direction: column;
+        gap: 6.5rem;
+        & .tl1{
+           font-size: 6rem;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            &-e{
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;  
+                & p{
+                    white-space: pre-line;
+                }
+            }
+        }
+    }
+
+
+}

@@ -19,6 +19,9 @@ body {
     touch-action: none;
   }
 }
+.disable-margin section{
+margin-top: 6rem !important;
+}
 
 .wrapper {
   display: flex;

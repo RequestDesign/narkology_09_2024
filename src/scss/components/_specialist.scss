@@ -1,0 +1,100 @@
+.specialist {
+    margin-top: 6.5rem;
+    &__c {
+        display: grid;
+        grid-template-columns: auto 68rem;
+        grid-auto-rows: auto;
+        gap: 3.5rem 4rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            gap: 5rem;
+        }
+
+
+        &-head {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        &-right {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+
+            @include small-tablet {
+                grid-row: 2;
+                grid-column: 1;
+            }
+
+            &-img {
+                width: 100%;
+                height: 53.4rem;
+                display: flex;
+
+                & img {
+                    border-radius: 3rem;
+                    width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &-contact {
+                margin-top: 3.5rem;
+                display: flex;
+                border-radius: 3rem;
+                justify-content: space-between;
+                padding: 4rem 3rem;
+                box-sizing: border-box;
+                box-shadow: 1.6rem 1.4rem 6rem 0px rgba(0, 89, 255, 0.14);
+                background-color: $white;
+                align-items: center;
+
+                @include small-tablet {
+                    flex-direction: column;
+                    gap: 4rem;
+               
+                    align-items: flex-start;
+                }
+
+                &-phone {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    font-weight: 700;
+
+                    & img {
+                        width: 3.2rem;
+                        height: 3.2rem;
+                    }
+                }
+
+            }
+        }
+
+        &-body {
+
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+
+            @include small-tablet {
+                gap: 8rem;
+                margin-top: 5rem;
+            }
+
+            & .marked-list {
+                margin-top: 1.6rem;
+
+                @include small-tablet {
+                    margin-top: 3rem;
+                }
+            }
+        }
+
+    }
+
+
+}

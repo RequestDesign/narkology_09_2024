@@ -1,0 +1,130 @@
+.feedback-page {
+    margin-top: 6.5rem;
+
+    &__c {
+        margin-top: 6.5rem;
+        display: grid;
+        grid-template-columns: auto 47rem;
+        gap: 3.5rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 6.5rem;
+
+            & .btn-second {
+                width: fit-content;
+                margin: auto;
+            }
+
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 3.5rem;
+
+            }
+        }
+
+        &-right {
+            position: sticky;
+            top: 20rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            height: fit-content;
+
+            @include small-tablet {
+                margin-top: 15rem;
+            }
+
+            & .prices__c-right {
+                position: relative;
+                top: 0;
+            }
+
+            &-license {
+                display: grid;
+                grid-template-columns: auto 12rem;
+                grid-template-rows: min-content max-content;
+                box-shadow: 1.6rem 1.4rem 6rem 0px rgba(0, 89, 255, 0.14);
+                background-color: $white;
+                padding: 3.2rem;
+                box-sizing: border-box;
+                border-radius: 3rem;
+
+                @include small-tablet {
+                    grid-template-columns: auto 28rem;
+                }
+
+
+                & img {
+                    grid-column: 2;
+                    grid-row: 1 / span 2;
+                    width: 100%;
+                    height: 16rem;
+
+                    @include small-tablet {
+                        height: 40rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.feedback-page-review {
+
+    &__c {
+        margin-top: 6.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & .btn-primary {
+                width: fit-content;
+            }
+
+            @include small-tablet {
+                gap: 7rem;
+            }
+        }
+
+        &-img {
+            border-radius: 3rem;
+            overflow: hidden;
+            display: flex;
+            @include small-tablet{
+                height: 64rem;
+            }
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+    }
+
+}
+
+.feedback-page-form-margin{
+    margin: 1.6rem  0 3.5rem;
+    @include small-tablet{
+        margin: 0;
+    }
+}

@@ -28,7 +28,10 @@
       <include src="./components/_contacts.html"></include>
     </main>
     <include src="./components/_footer.html"></include>
+    <include src="./components/_modal-send.html"></include>
+    <include src="./components/_modal-thx.html"></include>
   </div>
+
   <script src="https://api-maps.yandex.ru/2.1/?apikey=baf2c816-f3bd-4189-98d8-72b7e716c191&lang=ru_RU" type="text/javascript"></script>
   <script type="text/javascript">
     ymaps.ready(init);
@@ -39,7 +42,7 @@
         controls: ['fullscreenControl']
       });
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'mental health'
+        hintContent: 'there is no palce for narkomany 😎'
       }, {
         iconLayout: 'default#image',
         iconImageHref: './assets/images/icons/map-marker.svg',

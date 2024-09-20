@@ -1,0 +1,34 @@
+.path {
+    @include small-tablet {
+        margin-top: 20rem;
+
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+        &-e {
+            padding: 0 .6rem 0 .6rem;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: '-';
+                font-weight: 500;
+                margin-right: .6rem;
+                font-size: 3rem;
+                line-height: .2rem;
+                color: $black;
+            }
+
+            &:first-of-type::before {
+                display: none;
+            }
+
+            &_curr {
+                color: $blue;
+            }
+        }
+    }
+}
