@@ -11,34 +11,34 @@ $(function () {
     openService.on('click', (e) => {
         if (!e.currentTarget.classList.contains('_opened')) {
             if (window.innerWidth > 768) {
-                descService.addClass('_opened')
+                descService.fadeIn().addClass('_opened')
                 e.currentTarget.classList.add('_opened')
                 header.addClass('_opened')
             } else {
 
-                mobileService.addClass('_opened')
+                mobileService.fadeIn().addClass('_opened')
             }
         } else {
-            descService.removeClass('_opened')
+            descService.fadeOut().removeClass('_opened')
             e.currentTarget.classList.remove('_opened')
             header.removeClass('_opened')
-            mobileService.removeClass('_opened')
+            mobileService.fadeOut().removeClass('_opened')
         }
 
     })
     openNav.on('click', (e) => {
         if (!e.currentTarget.classList.contains('_opened')) {
             if (window.innerWidth < 768) {
-                nav.addClass('_opened')
+                nav.fadeIn().addClass('_opened')
                 e.currentTarget.classList.toggle('_opened')
 
             } else {
-                mobileService.removeClass('_opened')
+                mobileService.fadeOut().removeClass('_opened')
             }
         } else {
-            nav.removeClass('_opened')
+            nav.fadeOut().removeClass('_opened')
             e.currentTarget.classList.remove('_opened')
-            mobileService.removeClass('_opened')
+            mobileService.fadeOut().removeClass('_opened')
         }
     })
 
