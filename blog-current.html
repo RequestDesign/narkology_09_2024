@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блог детальный</title>
+
+<script defer src="main.js"></script></head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+    <div class="container">
+        <div class="header__c">
+            <button class="header__c-open-btn open-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="header__c-logo">
+                <img src="../assets/images/icons/logo.svg" alt="narcology">
+            </div>
+
+            <button class="header__c-service btn-second open-service">
+                <span class="header__c-service-text txt24 txt24_bold">Услуги</span>
+                <span class="header__c-service-icon btn-second-icon">
+                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L8 8L15 1" stroke="#4F84E0" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+
+                </span>
+
+            </button>
+
+            <div class="header__c-list ">
+                <div class="header__c-list-main">
+                    <div class="header__c-list-mobile-w ">
+                        <div class="header__c-list-mobile">
+                            <button class="header__c-list-service dd-arrow dd-arrow_small open-service">
+                                <span class="dd-arrow-text tl3">Услуги</span>
+                                <span class="dd-arrow-icon">
+                                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.0016 7C0.449311 7 0.000881608 7.44772 5.96046e-08 8C-0.000881489 8.55228 0.446119 9 0.998404 9L1.0016 7ZM21.706 8.70711C22.0971 8.31658 22.0981 7.68342 21.7082 7.29289L15.3544 0.928941C14.9645 0.538418 14.3314 0.538418 13.9402 0.928941C13.5491 1.31947 13.5481 1.95263 13.938 2.34315L19.5858 8L13.9199 13.6568C13.5288 14.0474 13.5277 14.6805 13.9176 15.0711C14.3075 15.4616 14.9407 15.4616 15.3319 15.0711L21.706 8.70711ZM0.998404 9L20.9984 9L21.0016 7L1.0016 7L0.998404 9Z">
+                                        </path>
+                                    </svg>
+                                </span>
+
+                            </button>
+                            <a href="#" class="tl3">Клиника</a>
+                            <a href="#" class="tl3">Цены</a>
+                            <a href="#" class="tl3">Специалисты</a>
+                            <a href="#" class="tl3">Блог</a>
+                            <a href="#" class="tl3">Контакты</a>
+
+                            <ul class="header__c-list-mobile-contacts">
+                                <li class="header__c-list-mobile-contacts-e">
+                                    <span class="header__c-list-mobile-contacts-e-icon">
+                                        <img src="../assets/images/icons/phone-white.svg" alt="phone">
+                                    </span>
+                                    <span class="txt24">8 (800) 000 00 00</span>
+                                </li>
+                                <li class="header__c-list-mobile-contacts-e">
+                                    <span class="header__c-list-mobile-contacts-e-icon">
+                                        <img src="../assets/images/icons/mail-white.svg" alt="mail">
+                                    </span>
+                                    <span class="txt24">forexample@.com</span>
+                                </li>
+                                <li class="header__c-list-mobile-contacts-e">
+                                    <span class="header__c-list-mobile-contacts-e-icon">
+                                        <img src="../assets/images/icons/geo-white.svg" alt="geo">
+                                    </span>
+                                    <span class="txt24">г. Южно-Сахалинск, ул. Пожарского, д.22</span>
+                                </li>
+
+                            </ul>
+                            <div class="header__c-list-mobile-banner">
+                                <p class="txt24 txt24_bold"> Бесплатная консультация! <span class="col-bl">24/7</span>
+                                </p>
+                                <button class=" btn-second txt24 txt24_bold modal-opener" data-modal="send-call">
+                                    Оставить заявку
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="header__c-list-nav">
+                        <a href="#" class="txt20">Клиника</a>
+                        <a href="#" class="txt20">Цены</a>
+                        <a href="#" class="txt20">Специалисты</a>
+                        <a href="#" class="txt20">Блог</a>
+                        <a href="#" class="txt20">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+
+            <a href="tel:+78000000000" class="header__c-phone">
+                <span class="header__c-phone-img">
+                    <img src="../assets/images/icons/phone-white.svg" alt="phone">
+                </span>
+                <span class="header__c-phone-text col-bl txt24 txt24_bold">
+                    8 800 000 00 00
+                </span>
+            </a>
+
+            <div class="header__c-service-desk">
+                <div class="header__c-service-desk-main">
+                    <div class="header__c-service-desk-left">
+                        <ul class="header__c-service-desk-left-list">
+                            <li class="header__c-service-desk-left-list-e">
+                                <img src="../assets/images/icons/complex.svg" alt="service">
+                                <span class="txt24 txt24_bold">Комплексные услуги</span>
+                            </li>
+                            <li class="header__c-service-desk-left-list-e">
+                                <img src="../assets/images/icons/alcohol.svg" alt="service">
+                                <span class="txt24 txt24_bold">Алкоголизм</span>
+                            </li>
+                            <li class="header__c-service-desk-left-list-e">
+                                <img src="../assets/images/icons/drugs.svg" alt="service">
+                                <span class="txt24 txt24_bold">Наркомания</span>
+                            </li>
+                            <li class="header__c-service-desk-left-list-e">
+                                <img src="../assets/images/icons/games.svg" alt="service">
+                                <span class="txt24 txt24_bold">Игромания</span>
+                            </li>
+                            <li class="header__c-service-desk-left-list-e">
+                                <img src="../assets/images/icons/teenage.svg" alt="service">
+                                <span class="txt24 txt24_bold">Подростковая зависимость</span>
+                            </li>
+                            <li class="header__c-service-desk-left-list-e">
+                                <img src="../assets/images/icons/drop.svg" alt="service">
+                                <span class="txt24 txt24_bold">Капельница</span>
+                            </li>
+                            <li class="header__c-service-desk-left-list-e">
+                                <img src="../assets/images/icons/diagnost.svg" alt="service">
+                                <span class="txt24 txt24_bold">Диагностика и лабораторные исследования</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__c-service-desk-right">
+                        <div class="header__c-service-desk-right-data">
+                            <a href="#" class="txt20">Лечение алкоголизма амбулаторно</a>
+                            <a href="#" class="txt20">Лечение алкоголизма амбулаторно</a>
+                            <a href="#" class="txt20">Лечение алкоголизма амбулаторно</a>
+                            <a href="#" class="txt20">Лечение алкоголизма амбулаторно</a>
+                            <a href="#" class="txt20">Лечение алкоголизма амбулаторно</a>
+                            <a href="#" class="txt20">Лечение алкоголизма амбулаторно</a>
+                        </div>
+                        <div class="header__c-service-desk-right-footer">
+                            <p class="txt24 txt24_bold">Бесплатная консультация! <span class="col-bl">24/7</span></p>
+                            <button class="btn-second txt24 txt24_bold modal-opener" data-modal="send-call">оставить
+                                заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__c-service-mobile ">
+                <div class="header__c-service-mobile-main">
+                    <ul class="header__c-service-mobile-list">
+                        <li class="header__c-service-mobile-list-e drop-down-container">
+                            <button class="header__c-service-mobile-list-e-btn drop-down-target">
+                                <img src="../assets/images/icons/complex.svg" alt="service">
+                                <span class="txt24 txt24_bold">Комплексные услуги</span>
+                                <span class="header__c-service-mobile-list-e-btn-icon">
+                                    <img src="../assets/images/icons/arrow.svg" alt="V">
+                                </span>
+                            </button>
+                            <div class="header__c-service-mobile-list-e-data">
+                                <ul class="header__c-service-mobile-list-e-data-links">
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </li>
+                        <li class="header__c-service-mobile-list-e drop-down-container">
+                            <button class="header__c-service-mobile-list-e-btn drop-down-target">
+                                <img src="../assets/images/icons/complex.svg" alt="service">
+                                <span class="txt24 txt24_bold">Комплексные услуги</span>
+                                <span class="header__c-service-mobile-list-e-btn-icon">
+                                    <img src="../assets/images/icons/arrow.svg" alt="V">
+                                </span>
+                            </button>
+                            <div class="header__c-service-mobile-list-e-data">
+                                <ul class="header__c-service-mobile-list-e-data-links">
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </li>
+                        <li class="header__c-service-mobile-list-e drop-down-container">
+                            <button class="header__c-service-mobile-list-e-btn drop-down-target">
+                                <img src="../assets/images/icons/complex.svg" alt="service">
+                                <span class="txt24 txt24_bold">Комплексные услуги</span>
+                                <span class="header__c-service-mobile-list-e-btn-icon">
+                                    <img src="../assets/images/icons/arrow.svg" alt="V">
+                                </span>
+                            </button>
+                            <div class="header__c-service-mobile-list-e-data">
+                                <ul class="header__c-service-mobile-list-e-data-links">
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+                                    <li class="header__c-service-mobile-list-e-data-links-link">
+                                        <a href="#" class="txt14">Кодирование от алкоголизма на дому</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+        <main>
+            <section class="path">
+                <div class="container path__list">
+                    <a href="#" class="path__list-e txt18">Главная</a>
+                    <a href="#" class="path__list-e path__list-e_curr txt18">Текущая</a>
+                </div>
+            </section>
+
+            <section class="blog-current">
+                <div class="container blog-current__c">
+                    <h1 class="blog-current__c-head tl1">Выход из алкогольного опьянения</h1>
+                    <div class="blog-current__c-info">
+                        <p class="txt20 col-gray">12.12.1212</p>
+                        <div class="blog-current__c-info-tags">
+                            <span class="blog-current__c-info-tags-e txt20 col-bl">Алкоголизм</span>
+                        </div>
+                        <span class="txt18 blog-current__c-info-time">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.0013 2.6665C8.65464 2.6665 2.66797 8.65317 2.66797 15.9998C2.66797 23.3465 8.65464 29.3332 16.0013 29.3332C23.348 29.3332 29.3346 23.3465 29.3346 15.9998C29.3346 8.65317 23.348 2.6665 16.0013 2.6665ZM21.8013 20.7598C21.6146 21.0798 21.2813 21.2532 20.9346 21.2532C20.7613 21.2532 20.588 21.2132 20.428 21.1065L16.2946 18.6398C15.268 18.0265 14.508 16.6798 14.508 15.4932V10.0265C14.508 9.47984 14.9613 9.0265 15.508 9.0265C16.0546 9.0265 16.508 9.47984 16.508 10.0265V15.4932C16.508 15.9732 16.908 16.6798 17.3213 16.9198L21.4546 19.3865C21.9346 19.6665 22.0946 20.2798 21.8013 20.7598Z"
+                                    fill="#4F84E0" />
+                            </svg>
+                            Время чтения: 7-15 минут
+                        </span>
+
+                    </div>
+                    <div class="blog-current__c-body">
+                        <h3 class="tl2">Симптомы</h3>
+                        <ul class="marked-list">
+                            <li class="marked-list-e txt20 col-gray">
+                                <img src="./assets/images/icons/dot.svg" alt="dot">
+                                После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
+                            </li>
+                            <li class="marked-list-e txt20 col-gray">
+                                <img src="./assets/images/icons/dot.svg" alt="dot">
+                                Трудоустраивается, либо продолжает обучение
+                            </li>
+                            <li class="marked-list-e txt20 col-gray">
+                                <img src="./assets/images/icons/dot.svg" alt="dot">
+                                Также он находится на сопровождении психолога и посещает групповые и индивидуальные
+                                занятия в городе
+                            </li>
+                        </ul>
+                        <div class="blog-current__c-body-img">
+                            <img src="./assets/images/blood-stage.webp" alt="photo">
+                        </div>
+                        <h3 class="tl2">Причины</h3>
+                        <p class="txt20">Алкогольная зависимость – это серьезная проблема, которая требует
+                            профессионального подхода. Клиника «Здоровье» предлагает эффективное лечение алкоголизма,
+                            которое включает в себя комплексный подход к каждому пациенту.
+                        </p>
+                        <div class="blog-current__c-body-accent">
+                            <span class="blog-current__c-body-accent-img">
+                                <svg width="48" height="38" viewBox="0 0 48 38" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.73333 22L15.6 0H23.2L14.2667 19.0667C17.9111 20.9333 19.7333 23.9111 19.7333 28C19.7333 30.6667 18.7556 33.0222 16.8 35.0667C14.8444 37.0222 12.5333 38 9.86667 38C7.02222 38 4.66667 37.0222 2.8 35.0667C0.933333 33.1111 0 30.7556 0 28C0 25.7778 0.577778 23.7778 1.73333 22ZM26.5333 22L40.4 0H48L39.0667 19.0667C42.7111 20.9333 44.5333 23.9111 44.5333 28C44.5333 30.6667 43.5556 33.0222 41.6 35.0667C39.6444 37.0222 37.3333 38 34.6667 38C31.8222 38 29.4667 37.0222 27.6 35.0667C25.7333 33.1111 24.8 30.7556 24.8 28C24.8 25.7778 25.3778 23.7778 26.5333 22Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                            <div class="blog-current__c-body-accent-text">
+                                <p class="txt20">«Хочу посоветовать – не стоит стараться уйти от проблемы путем
+                                    отстранения
+                                    от происходящего с вашим близким человеком»</p>
+                            </div>
+
+                        </div>
+                        <p class="txt20">Алкогольная зависимость – это серьезная проблема, которая требует
+                            профессионального подхода. Клиника «Здоровье» предлагает эффективное лечение алкоголизма,
+                            которое включает в себя комплексный подход к каждому пациенту.
+                        </p>
+                        <p class="txt20">Алкогольная зависимость – это серьезная проблема, которая требует
+                            профессионального подхода. Клиника «Здоровье» предлагает эффективное лечение алкоголизма,
+                            которое включает в себя комплексный подход к каждому пациенту.
+                        </p>
+                        <ul class="blog-current__c-body-checked">
+                            <li class="blog-current__c-body-checked-e txt20 col-gray">
+                                <img src="./assets/images/icons/Check.svg" alt="v">
+                                После выхода из реабилитационного центра пациент адаптируется к жизни в социуме
+                            </li>
+                            <li class="blog-current__c-body-checked-e txt20 col-gray">
+                                <img src="./assets/images/icons/Check.svg" alt="v">
+                                Трудоустраивается, либо продолжает обучение
+                            </li>
+                            <li class="blog-current__c-body-checked-e txt20 col-gray">
+                                <img src="./assets/images/icons/Check.svg" alt="v">
+                                Также он находится на сопровождении психолога и посещает групповые и индивидуальные
+                                занятия в городе
+                            </li>
+                        </ul>
+
+                        <div class="blog-current__c-body-accent">
+                            <span class="blog-current__c-body-accent-img">
+                                <svg width="38" height="39" viewBox="0 0 38 39" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 38.5C29.4934 38.5 38 29.9934 38 19.5C38 9.00659 29.4934 0.5 19 0.5C8.50659 0.5 0 9.00659 0 19.5C0 29.9934 8.50659 38.5 19 38.5Z"
+                                        fill="url(#paint0_linear_237_19817)" />
+                                    <path
+                                        d="M19.0233 22.6335C18.6667 22.6335 18.3876 22.5102 18.186 22.2636C17.9845 22.0169 17.8605 21.6558 17.814 21.1801L17.0698 12.1426C16.9922 11.3498 17.124 10.7156 17.4651 10.2399C17.8062 9.74664 18.3256 9.5 19.0233 9.5C19.6899 9.5 20.1938 9.74664 20.5349 10.2399C20.876 10.7156 21.0078 11.3498 20.9302 12.1426L20.186 21.1801C20.1395 21.6558 20.0155 22.0169 19.814 22.2636C19.6279 22.5102 19.3643 22.6335 19.0233 22.6335ZM19.0233 28.5C18.4031 28.5 17.907 28.2886 17.5349 27.8658C17.1783 27.443 17 26.8968 17 26.2274C17 25.5756 17.1783 25.0471 17.5349 24.6419C17.907 24.2191 18.4031 24.0076 19.0233 24.0076C19.6434 24.0076 20.124 24.2191 20.4651 24.6419C20.8217 25.0471 21 25.5756 21 26.2274C21 26.8968 20.8217 27.443 20.4651 27.8658C20.124 28.2886 19.6434 28.5 19.0233 28.5Z"
+                                        fill="white" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_237_19817" x1="19" y1="0.5" x2="19" y2="38.5"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#5188ED" />
+                                            <stop offset="1" stop-color="#306DE5" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+
+                            </span>
+                            <div class="blog-current__c-body-accent-text">
+                                <p class="txt24 txt24_bold"> Причина употребления</p>
+                                <p class="txt20">Главной причиной употребления явлется непреодолимая тяга к веществу!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-current__c-verified">
+                        <div class="blog-current__c-verified-img">
+                            <img src="./assets/images/specialist.webp" alt="specialist">
+                        </div>
+                        <span class="blog-current__c-verified-head txt18 col-bl">
+                            <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 3.1665H8C5.78667 3.1665 4 4.93984 4 7.1265V21.6732C4 23.8598 5.78667 25.6332 8 25.6332H9.01333C10.08 25.6332 11.0933 26.0465 11.84 26.7932L14.12 29.0465C15.16 30.0732 16.8533 30.0732 17.8933 29.0465L20.1733 26.7932C20.92 26.0465 21.9467 25.6332 23 25.6332H24C26.2133 25.6332 28 23.8598 28 21.6732V7.1265C28 4.93984 26.2133 3.1665 24 3.1665ZM22.24 14.4998L20.68 19.2465C20.48 20.0332 19.64 20.6732 18.7867 20.6732H16.32C15.8933 20.6732 15.2933 20.5265 15.0267 20.2598L13.0667 18.7265C13.0267 19.5798 12.64 19.9398 11.6933 19.9398H11.0533C10.0667 19.9398 9.66667 19.5532 9.66667 18.6198V12.2598C9.66667 11.3265 10.0667 10.9398 11.0533 10.9398H11.7067C12.6933 10.9398 13.0933 11.3265 13.0933 12.2598V12.7398L15.68 8.89984C15.9467 8.4865 16.6267 8.19317 17.2 8.41984C17.8267 8.63317 18.2267 9.3265 18.0933 9.93984L17.7733 12.0198C17.7333 12.1932 17.7733 12.3798 17.8933 12.4998C18 12.6198 18.16 12.6998 18.3333 12.6998H20.9333C21.44 12.6998 21.8667 12.8998 22.12 13.2598C22.36 13.6065 22.4 14.0465 22.24 14.4998Z"
+                                    fill="#4F84E0" />
+                            </svg>
+                            Статья проверена специалистом
+                        </span>
+                        <p class="txt20">Александрова Елена Александрова</p>
+                        <p class="txt18">Главный врач клиники</p>
+                    </div>
+                    <div class="blog-current__c-side side-box">
+                        <div class="side-box__c">
+                            <p class="tl3"><strong>Получите бесплатную консультацию</strong></p>
+                            <p class="txt20 col-gray">Врач соберет анамнез и поможет подобрать лечение</p>
+                            <button class="btn-primary txt24 txt24_bold">Оставить заявку</button>
+
+                            <img class="side-box__c-bg" src="./assets/images/circle-bg.webp" alt="bg">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="specialists">
+                <div class="container">
+                    <div class="specialists__top">
+                        <h2 class="tl1">Другие статьи</h2>
+
+                    </div>
+                    <div class="specialists__slider swiper">
+                        <ul class="specialists__slider-list swiper-wrapper">
+                            <li class="blog__c-list-e swiper-slide">
+                                <a href="#">
+                                    <div class="blog__c-list-e-img">
+                                        <div class="blog__c-list-e-img-tags">
+                                            <span class="blog__c-list-e-img-tags-e txt14 col-bl">Алкоголизм</span>
+                                        </div>
+
+                                        <img src="./assets/images/blood-stage.webp" alt="blog img">
+                                    </div>
+                                    <div class="blog__c-list-e-body">
+                                        <p class="blog__c-list-e-body-date col-gray txt18">12.12.1212</p>
+                                        <p class="blog__c-list-e-body-name txt24 txt24_bold">Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Totam, cupiditate!</p>
+                                        <p class="blog__c-list-e-body-text txt18 col-gray">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+                                            aspernatur
+                                            dolores impedit id molestias similique in vero quis magnam corporis.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog__c-list-e swiper-slide">
+                                <a href="#">
+                                    <div class="blog__c-list-e-img">
+                                        <div class="blog__c-list-e-img-tags">
+                                            <span class="blog__c-list-e-img-tags-e txt14 col-bl">Алкоголизм</span>
+                                        </div>
+
+                                        <img src="./assets/images/blood-stage.webp" alt="blog img">
+                                    </div>
+                                    <div class="blog__c-list-e-body">
+                                        <p class="blog__c-list-e-body-date col-gray txt18">12.12.1212</p>
+                                        <p class="blog__c-list-e-body-name txt24 txt24_bold">Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Totam, cupiditate!</p>
+                                        <p class="blog__c-list-e-body-text txt18 col-gray">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+                                            aspernatur
+                                            dolores impedit id molestias similique in vero quis magnam corporis.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog__c-list-e swiper-slide">
+                                <a href="#">
+                                    <div class="blog__c-list-e-img">
+                                        <div class="blog__c-list-e-img-tags">
+                                            <span class="blog__c-list-e-img-tags-e txt14 col-bl">Алкоголизм</span>
+                                        </div>
+
+                                        <img src="./assets/images/blood-stage.webp" alt="blog img">
+                                    </div>
+                                    <div class="blog__c-list-e-body">
+                                        <p class="blog__c-list-e-body-date col-gray txt18">12.12.1212</p>
+                                        <p class="blog__c-list-e-body-name txt24 txt24_bold">Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Totam, cupiditate!</p>
+                                        <p class="blog__c-list-e-body-text txt18 col-gray">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+                                            aspernatur
+                                            dolores impedit id molestias similique in vero quis magnam corporis.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog__c-list-e swiper-slide">
+                                <a href="#">
+                                    <div class="blog__c-list-e-img">
+                                        <div class="blog__c-list-e-img-tags">
+                                            <span class="blog__c-list-e-img-tags-e txt14 col-bl">Алкоголизм</span>
+                                        </div>
+
+                                        <img src="./assets/images/blood-stage.webp" alt="blog img">
+                                    </div>
+                                    <div class="blog__c-list-e-body">
+                                        <p class="blog__c-list-e-body-date col-gray txt18">12.12.1212</p>
+                                        <p class="blog__c-list-e-body-name txt24 txt24_bold">Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Totam, cupiditate!</p>
+                                        <p class="blog__c-list-e-body-text txt18 col-gray">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+                                            aspernatur
+                                            dolores impedit id molestias similique in vero quis magnam corporis.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog__c-list-e swiper-slide">
+                                <a href="#">
+                                    <div class="blog__c-list-e-img">
+                                        <div class="blog__c-list-e-img-tags">
+                                            <span class="blog__c-list-e-img-tags-e txt14 col-bl">Алкоголизм</span>
+                                        </div>
+
+                                        <img src="./assets/images/blood-stage.webp" alt="blog img">
+                                    </div>
+                                    <div class="blog__c-list-e-body">
+                                        <p class="blog__c-list-e-body-date col-gray txt18">12.12.1212</p>
+                                        <p class="blog__c-list-e-body-name txt24 txt24_bold">Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Totam, cupiditate!</p>
+                                        <p class="blog__c-list-e-body-text txt18 col-gray">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+                                            aspernatur
+                                            dolores impedit id molestias similique in vero quis magnam corporis.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog__c-list-e swiper-slide">
+                                <a href="#">
+                                    <div class="blog__c-list-e-img">
+                                        <div class="blog__c-list-e-img-tags">
+                                            <span class="blog__c-list-e-img-tags-e txt14 col-bl">Алкоголизм</span>
+                                        </div>
+
+                                        <img src="./assets/images/blood-stage.webp" alt="blog img">
+                                    </div>
+                                    <div class="blog__c-list-e-body">
+                                        <p class="blog__c-list-e-body-date col-gray txt18">12.12.1212</p>
+                                        <p class="blog__c-list-e-body-name txt24 txt24_bold">Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Totam, cupiditate!</p>
+                                        <p class="blog__c-list-e-body-text txt18 col-gray">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
+                                            aspernatur
+                                            dolores impedit id molestias similique in vero quis magnam corporis.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="specialists__slider-actions slider-actions ">
+
+                        <div class="slider-actions-pagin specialists-pagin">
+
+                        </div>
+                        <div class="slider-actions-btns">
+                            <button class="btn-slider btn-slider_left specialists-prev">
+                                <svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.0016 7C0.449311 7 0.000881608 7.44772 5.96046e-08 8C-0.000881489 8.55228 0.446119 9 0.998404 9L1.0016 7ZM21.706 8.70711C22.0971 8.31658 22.0981 7.68342 21.7082 7.29289L15.3544 0.928941C14.9645 0.538418 14.3314 0.538418 13.9402 0.928941C13.5491 1.31947 13.5481 1.95263 13.938 2.34315L19.5858 8L13.9199 13.6568C13.5288 14.0474 13.5277 14.6805 13.9176 15.0711C14.3075 15.4616 14.9407 15.4616 15.3319 15.0711L21.706 8.70711ZM0.998404 9L20.9984 9L21.0016 7L1.0016 7L0.998404 9Z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                            <button class="btn-slider btn-slider_right specialists-next">
+                                <svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.0016 7C0.449311 7 0.000881608 7.44772 5.96046e-08 8C-0.000881489 8.55228 0.446119 9 0.998404 9L1.0016 7ZM21.706 8.70711C22.0971 8.31658 22.0981 7.68342 21.7082 7.29289L15.3544 0.928941C14.9645 0.538418 14.3314 0.538418 13.9402 0.928941C13.5491 1.31947 13.5481 1.95263 13.938 2.34315L19.5858 8L13.9199 13.6568C13.5288 14.0474 13.5277 14.6805 13.9176 15.0711C14.3075 15.4616 14.9407 15.4616 15.3319 15.0711L21.706 8.70711ZM0.998404 9L20.9984 9L21.0016 7L1.0016 7L0.998404 9Z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+    <div class="container">
+        <ul class="footer__c">
+            <li class="footer__c-e footer__c-e_mobile">
+                <img class="footer__c-e-logo" src="../assets/images/icons/logo.svg" alt="logo">
+            </li>
+            <li class="footer__c-e">
+                <a href="#" class="footer__c-e-link txt20">Цены</a>
+                <a href="#" class="footer__c-e-link txt20">Клиника</a>
+                <a href="#" class="footer__c-e-link txt20">Специалисты</a>
+            </li>
+            <li class="footer__c-e">
+                <a href="#" class="footer__c-e-link txt20">Лицензии</a>
+                <a href="#" class="footer__c-e-link txt20">Отзывы</a>
+                <a href="#" class="footer__c-e-link txt20">Наш блог</a>
+            </li>
+
+            <li class="footer__c-e">
+                <a href="#" class="footer__c-e-link txt20">Контакты</a>
+                <div class="footer__c-e-call col-bl txt24 txt24_bold">
+                    <span class="footer__c-e-call-icon">
+                        <img src="../assets/images/icons/phone-white.svg" alt="phone">
+                    </span>
+                    8 800 000 00 00
+                </div>
+            </li>
+
+            <li class="footer__c-e footer__c-e_mobile">
+                <div class="footer__c-e-items footer__c-e-items_opened drop-down-container">
+                    <button class="footer__c-e-items-btn txt24 txt24_bold drop-down-target"> Наркомания
+                        <img src="../assets/images/icons/arrow.svg" alt="V">
+                    </button>
+                    <ul class=" footer__c-e-items-list">
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Анонимная наркологическая помощь</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании в стационаре</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Снятие ломки</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Вызвать нарколога на дом</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Реабилитация наркозависимых</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">УБОД</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="footer__c-e footer__c-e_mobile">
+                <div class="footer__c-e-items drop-down-container">
+                    <button class="footer__c-e-items-btn txt24 txt24_bold drop-down-target"> Алкоголизм
+                        <img src="../assets/images/icons/arrow.svg" alt="V">
+                    </button>
+                    <ul class=" footer__c-e-items-list">
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Анонимная наркологическая помощь</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании в стационаре</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Снятие ломки</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Вызвать нарколога на дом</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Реабилитация наркозависимых</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">УБОД</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="footer__c-e footer__c-e_mobile ">
+                <div class="footer__c-e-items drop-down-container">
+                    <button class="footer__c-e-items-btn txt24 txt24_bold drop-down-target"> Игромания
+                        <img src="../assets/images/icons/arrow.svg" alt="V">
+                    </button>
+                    <ul class=" footer__c-e-items-list">
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Анонимная наркологическая помощь</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании в стационаре</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Снятие ломки</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Вызвать нарколога на дом</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Реабилитация наркозависимых</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">УБОД</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="footer__c-e footer__c-e_mobile ">
+                <div class="footer__c-e-items drop-down-container">
+                    <button class="footer__c-e-items-btn txt24 txt24_bold drop-down-target"> Подростковая зависимость
+                        <img src="../assets/images/icons/arrow.svg" alt="V">
+                    </button>
+                    <ul class=" footer__c-e-items-list">
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Анонимная наркологическая помощь</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Лечение наркомании в стационаре</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Снятие ломки</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Вызвать нарколога на дом</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">Реабилитация наркозависимых</a>
+                        </li>
+                        <li class="footer__c-e-items-list-e txt18">
+                            <a href="#">УБОД</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+
+
+
+        </ul>
+    </div>
+</footer>
+        <div class="modal modal-send-call ">
+    <div class="modal-main  modal-closer">
+        <div class="modal-c-wrp">
+            <div class="modal__c">
+                <button class="modal__c-close modal-closer">
+                </button>
+                <div class="modal__c-left">
+                    <h2 class="tl1">Оставьте заявку!</h2>
+                    <p class="txt20">Врач соберет анамнез и поможет подобрать лечение</p>
+
+                    <form class="modal__c-left-form form" novalidate="">
+                        <label class="form-input-txt form-input">
+                            <input type="text" class="form-input-txt-el txt20" autocomplete="off" name="name" data-required="true" placeholder="имя">
+                            <span class="form-input-txt-error txt14"></span>
+                        </label>
+                        <label class="form-input-txt form-input">
+                            <input type="text" class="form-input-txt-el txt20" autocomplete="off" name="phone" placeholder="номер телефона" data-required="true">
+                            <span class="form-input-txt-error txt14"></span>
+                        </label>
+                        <label class="form-input-txt form-input modal__c-left-form-row ">
+                            <input type="text" class="form-input-txt-el txt20" autocomplete="off" name="message" maxlength="50" placeholder="ваше сообщение (не обязательно)">
+                            <span class="form-input-txt-error txt14"></span>
+                        </label>
+                        <label class="form-input form-check modal__c-left-form-row">
+                            <input class="form-check-input" name="policy" type="checkbox" data-required="true">
+                            <span class="form-check-icon">
+                                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.33333L5.8 8L13 1" stroke="#4F84E0" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            Отправляя форму, вы соглашаетесь с политикой конфиденциальности
+                        </label>
+
+                        <button type="submit" class="btn-primary txt24 txt24_bold">Отправить</button>
+                    </form>
+                </div>
+                <div class="modal__c-right">
+                    <div class="modal__c-right-img">
+                        <img src="../assets/images/service-heading.webp" alt="heading">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="modal modal-success modal-closer">
+    <div class="modal-main  modal-closer">
+        <div class="modal-c-wrp">
+            <div class="modal__c">
+                <button class="modal__c-close modal-closer">
+                    <img src="../assets/images/icons/x.svg" alt="x">
+                </button>
+                <div class="modal__c-left modal__c-left_thx">
+                    <h2 class="tl1">Заявка отправлена!</h2>
+                    <p class="txt20 col-gray">Спасибо, что оставили заявку. Наши специалисты свяжутся с Вами в течении
+                        пяти минут</p>
+
+
+                </div>
+                <div class="modal__c-right modal__c-right_thx">
+                    <div class="modal__c-right-img">
+                        <img src="../assets/images/service-heading.webp" alt="heading">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+
+</html>
