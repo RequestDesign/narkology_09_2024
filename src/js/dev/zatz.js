@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { rem } from "../utils/constants";
 import Form from "../utils/forms";
 import Inputmask from "inputmask";
-
+import { Fancybox } from "@fancyapps/ui";
 
 
 
@@ -16,6 +16,7 @@ $(function () {
     feedBackOpenReview()
     modalsOpenHandler()
     priceServiceSwiper()
+    initFancybox()
 
     const forms = document.querySelectorAll('.form')
     if (forms) {
@@ -519,5 +520,20 @@ function formSubmit(inputsData) {
     $('.modal-success').fadeIn().addClass('_opened')
 }
 
+function initFancybox() {
+    const anytarget = document.querySelector('[data-fancybox]')
+    if (!anytarget) return
+
+    Fancybox.bind('[data-fancybox]', {
+        Thumbs: false,
+        Toolbar: {
+            display: {
+                left: [],
+                middle: ["infobar"],
+                right: ["close"],
+            },
+        },
+    })
+}
 
 

@@ -5,7 +5,7 @@ $blue: #4F84E0;
 $white: #ffffff;
 $gray: #656A75;
 $light-blue: #DCE9FF;
-$liner: #5188ED    #306DE5;
+$liner: #5188ED #306DE5;
 $bg: #ffffff;
 $red: rgba(217, 56, 56, 1);
 
@@ -19,8 +19,9 @@ body {
     touch-action: none;
   }
 }
-.disable-margin section{
-margin-top: 6rem !important;
+
+.disable-margin section {
+  margin-top: 6rem !important;
 }
 
 .wrapper {
@@ -35,17 +36,21 @@ margin-top: 6rem !important;
 * {
   // outline:  1px solid red;
 }
+
 // main
 main {
   flex-grow: 1;
 
   section {
     margin: 20rem 0 0;
+
     @include small-tablet {
       margin: 16rem 0 0;
     }
+
     &._first {
       margin: 3.2rem 0 0rem;
+
       @include small-tablet {
         margin: 6.4rem 0 0rem;
       }
@@ -69,5 +74,19 @@ main {
   }
 }
 
-@import './ui/ui';
+.fancybox__container {
+  backdrop-filter: 1rem;
+  -webkit-backdrop-filter: 1rem;
+  --fancybox-bg: rgba(25, 31, 43, 0.8);
 
+}
+
+.fancybox__toolbar {
+  --f-button-bg: rgba(25, 31, 43, 0.8);
+  --f-button-hover-bg: rgba(25, 31, 43, 0.8);
+  --f-button-active-bg: rgba(25, 31, 43, 0.8);
+}
+
+
+
+@import './ui/ui';
