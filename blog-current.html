@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Блог детальный</title>
 
-<script defer src="main.js"></script></head>
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 
 <body>
     <div class="wrapper">
@@ -418,7 +418,7 @@
                         <div class="side-box__c">
                             <p class="tl3"><strong>Получите бесплатную консультацию</strong></p>
                             <p class="txt20 col-gray">Врач соберет анамнез и поможет подобрать лечение</p>
-                            <button class="btn-primary txt24 txt24_bold">Оставить заявку</button>
+                            <button class="btn-primary txt24 txt24_bold modal-opener" data-modal="send-call">Оставить заявку</button>
 
                             <img class="side-box__c-bg" src="./assets/images/circle-bg.webp" alt="bg">
                         </div>
@@ -616,12 +616,12 @@
 
             <li class="footer__c-e">
                 <a href="#" class="footer__c-e-link txt20">Контакты</a>
-                <div class="footer__c-e-call col-bl txt24 txt24_bold">
+                <a href="tel:812938989" class="footer__c-e-call col-bl txt24 txt24_bold">
                     <span class="footer__c-e-call-icon">
                         <img src="../assets/images/icons/phone-white.svg" alt="phone">
                     </span>
                     8 800 000 00 00
-                </div>
+                </a>
             </li>
 
             <li class="footer__c-e footer__c-e_mobile">
@@ -792,7 +792,7 @@
                 </div>
                 <div class="modal__c-right">
                     <div class="modal__c-right-img">
-                        <img src="../assets/images/service-heading.webp" alt="heading">
+                        <img src="./assets/images/service-heading.webp" alt="heading">
 
                     </div>
                 </div>
@@ -806,7 +806,6 @@
         <div class="modal-c-wrp">
             <div class="modal__c">
                 <button class="modal__c-close modal-closer">
-                    <img src="../assets/images/icons/x.svg" alt="x">
                 </button>
                 <div class="modal__c-left modal__c-left_thx">
                     <h2 class="tl1">Заявка отправлена!</h2>
@@ -817,7 +816,7 @@
                 </div>
                 <div class="modal__c-right modal__c-right_thx">
                     <div class="modal__c-right-img">
-                        <img src="../assets/images/service-heading.webp" alt="heading">
+                        <img src="./assets/images/service-heading.webp" alt="heading">
 
                     </div>
                 </div>

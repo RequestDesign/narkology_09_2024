@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Наркология</title>
-<script defer src="main.js"></script></head>
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 
 <body>
   <div class="root">
@@ -69,12 +69,92 @@
       <a href="./404.html">404</a>
      </li>
     </ol>
+    <p class="tl2">modals</p>
+    <ul>
+      <li>
+        <button class="tl3 modal-opener" data-modal="success"> modal success</button>
+      </li>
+      <li>
+        <button class="tl3 modal-opener" data-modal="send-call"> modal send call</button>
+      </li>
+    </ul>
    
       <li>
         <a href="./ui.html">ui</a>
       </li>
     </ol>
   </div>
+  <div class="modal modal-send-call ">
+    <div class="modal-main  modal-closer">
+        <div class="modal-c-wrp">
+            <div class="modal__c">
+                <button class="modal__c-close modal-closer">
+                </button>
+                <div class="modal__c-left">
+                    <h2 class="tl1">Оставьте заявку!</h2>
+                    <p class="txt20">Врач соберет анамнез и поможет подобрать лечение</p>
+
+                    <form class="modal__c-left-form form" novalidate="">
+                        <label class="form-input-txt form-input">
+                            <input type="text" class="form-input-txt-el txt20" autocomplete="off" name="name" data-required="true" placeholder="имя">
+                            <span class="form-input-txt-error txt14"></span>
+                        </label>
+                        <label class="form-input-txt form-input">
+                            <input type="text" class="form-input-txt-el txt20" autocomplete="off" name="phone" placeholder="номер телефона" data-required="true">
+                            <span class="form-input-txt-error txt14"></span>
+                        </label>
+                        <label class="form-input-txt form-input modal__c-left-form-row ">
+                            <input type="text" class="form-input-txt-el txt20" autocomplete="off" name="message" maxlength="50" placeholder="ваше сообщение (не обязательно)">
+                            <span class="form-input-txt-error txt14"></span>
+                        </label>
+                        <label class="form-input form-check modal__c-left-form-row">
+                            <input class="form-check-input" name="policy" type="checkbox" data-required="true">
+                            <span class="form-check-icon">
+                                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 3.33333L5.8 8L13 1" stroke="#4F84E0" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            Отправляя форму, вы соглашаетесь с политикой конфиденциальности
+                        </label>
+
+                        <button type="submit" class="btn-primary txt24 txt24_bold">Отправить</button>
+                    </form>
+                </div>
+                <div class="modal__c-right">
+                    <div class="modal__c-right-img">
+                        <img src="./assets/images/service-heading.webp" alt="heading">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="modal modal-success modal-closer">
+    <div class="modal-main  modal-closer">
+        <div class="modal-c-wrp">
+            <div class="modal__c">
+                <button class="modal__c-close modal-closer">
+                </button>
+                <div class="modal__c-left modal__c-left_thx">
+                    <h2 class="tl1">Заявка отправлена!</h2>
+                    <p class="txt20 col-gray">Спасибо, что оставили заявку. Наши специалисты свяжутся с Вами в течении
+                        пяти минут</p>
+
+
+                </div>
+                <div class="modal__c-right modal__c-right_thx">
+                    <div class="modal__c-right-img">
+                        <img src="./assets/images/service-heading.webp" alt="heading">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
   <style>
     @charset "UTF-8";
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
