@@ -6,10 +6,12 @@ $(function () {
         nav = $('.header__c-list '),
         descService = $('.header__c-service-desk'),
         mobileService = $('.header__c-service-mobile'),
-        header = $('.header')
+        header = $('.header'),
+        html = $('html')
 
     openService.on('click', (e) => {
         if (!e.currentTarget.classList.contains('_opened')) {
+            html.addClass('lock')
             if (window.innerWidth > 768) {
                 descService.fadeIn().addClass('_opened')
                 e.currentTarget.classList.add('_opened')
@@ -19,6 +21,7 @@ $(function () {
                 mobileService.fadeIn().addClass('_opened')
             }
         } else {
+            html.removeClass('lock')
             descService.fadeOut().removeClass('_opened')
             e.currentTarget.classList.remove('_opened')
             header.removeClass('_opened')
@@ -28,6 +31,7 @@ $(function () {
     })
     openNav.on('click', (e) => {
         if (!e.currentTarget.classList.contains('_opened')) {
+            html.addClass('lock')
             if (window.innerWidth < 768) {
                 nav.fadeIn().addClass('_opened')
                 e.currentTarget.classList.toggle('_opened')
@@ -36,6 +40,7 @@ $(function () {
                 mobileService.fadeOut().removeClass('_opened')
             }
         } else {
+            html.removeClass('lock')
             nav.fadeOut().removeClass('_opened')
             e.currentTarget.classList.remove('_opened')
             mobileService.fadeOut().removeClass('_opened')

@@ -137,7 +137,7 @@
                 z-index: 11;
                 width: 100vw;
                 height: calc(100vh - 16rem);
-                left: -2rem;
+                left: -1.5rem;
                 top: calc(100% + 3.8rem);
 
 
@@ -157,6 +157,7 @@
                     background-color: $bg;
                     transform: translateX(-100%);
                     transition: transform .5s;
+                    height: 100%;
                 }
 
 

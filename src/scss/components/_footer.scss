@@ -25,12 +25,12 @@
                 }   
             }
             &-logo {
-                width: 21.6rem;
-                height: 6.6rem;
+                max-width: 21.6rem;
+                max-height: 6.6rem;
 
                 @include small-tablet {
-                    width: 34rem;
-                    height: 10rem;
+                    max-width: 34rem;
+                    max-height: 10rem;
                    
                 }
             }
