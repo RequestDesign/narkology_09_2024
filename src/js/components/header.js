@@ -7,7 +7,9 @@ $(function () {
         descService = $('.header__c-service-desk'),
         mobileService = $('.header__c-service-mobile'),
         header = $('.header'),
-        html = $('html')
+        html = $('html'),
+        mobileCategory = $('.header__c-service-desk-left-list-e'),
+        categoryList = $('.header__c-service-desk-right-data')
 
     openService.on('click', (e) => {
         if (!e.currentTarget.classList.contains('_opened')) {
@@ -46,5 +48,10 @@ $(function () {
             mobileService.fadeOut().removeClass('_opened')
         }
     })
+    mobileCategory.on('click',(e)=>{
+       const {slideto} = e.currentTarget.dataset;
+categoryList.css({'transform': `translate(-${slideto}00%)`})
+    })
+    
 
 });
