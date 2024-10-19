@@ -48,10 +48,10 @@ $(function () {
             mobileService.fadeOut().removeClass('_opened')
         }
     })
-    mobileCategory.on('click',(e)=>{
-       const {slideto} = e.currentTarget.dataset;
-categoryList.css({'transform': `translate(-${slideto}00%)`})
+    mobileCategory.on('click', (e) => {
+        const { slideto } = e.currentTarget.dataset;
+        categoryList.css({ 'transform': `translate(-${slideto}00%)` })
     })
-    
+
 
 });
