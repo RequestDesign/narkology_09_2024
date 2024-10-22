@@ -63,6 +63,7 @@
                     & img {
                         width: 50%;
                         height: 50%;
+                        flex-shrink: 0;
                     }
 
                 }
@@ -72,12 +73,15 @@
                 display: flex;
                 width: 4.5rem;
                 height: 4.5rem;
+                align-items: center;
+                gap: 1rem;
                 @include small-tablet{
                     width: 6rem;
                     height: 6rem;
                 }
                 & img{
                     object-fit: cover;
+                    flex-shrink: 0;
                 }
             }
 
