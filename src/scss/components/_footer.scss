@@ -19,19 +19,20 @@
             flex-direction: column;
             gap: 3.2rem;
 
-            &_mobile{
+            &_mobile {
                 @include small-tablet {
                     grid-column: 1 / span 2;
-                }   
+                }
             }
+
             &-logo {
-                max-width: 21.6rem;
-                max-height: 6.6rem;
+                max-width: 28.6rem;
+                max-height: 7.6rem;
 
                 @include small-tablet {
-                    max-width: 34rem;
+                    max-width: 40rem;
                     max-height: 10rem;
-                   
+
                 }
             }
 
@@ -44,6 +45,7 @@
             &-call {
                 display: flex;
                 gap: 1rem;
+                align-items: center;
 
                 &-icon {
                     width: 4.5rem;
@@ -53,6 +55,10 @@
                     align-items: center;
                     justify-content: center;
                     background-color: $blue;
+                    @include small-tablet{
+                        width: 6rem;
+                        height: 6rem;
+                    }
 
                     & img {
                         width: 50%;
@@ -62,23 +68,38 @@
                 }
             }
 
+            &-social {
+                display: flex;
+                width: 4.5rem;
+                height: 4.5rem;
+                @include small-tablet{
+                    width: 6rem;
+                    height: 6rem;
+                }
+                & img{
+                    object-fit: cover;
+                }
+            }
+
             &-items {
                 transition: grid .5s;
-               
+
                 @include small-tablet {
-                   display: grid;
-                   grid-template-rows: min-content 0fr;
+                    display: grid;
+                    grid-template-rows: min-content 0fr;
                 }
-                &._opened{
-                    
+
+                &._opened {
+
                     @include small-tablet {
                         grid-template-rows: min-content 1fr;
-                        & .footer__c-e-items-btn img{
+
+                        & .footer__c-e-items-btn img {
                             transform: rotate(180deg);
                         }
-                     }
+                    }
                 }
-                
+
                 &-btn {
                     margin-bottom: 2.8rem;
                     width: 100%;

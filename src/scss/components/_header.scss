@@ -91,14 +91,14 @@
             align-items: center;
 
             & img {
-                width: 17.5rem;
-                height: 5rem;
+                width: 32.5rem;
+                height: 8rem;
                 object-fit: contain;
 
 
                 @include small-tablet {
-                    width: 25.4rem;
-                    height: 7rem;
+                    width: 32.4rem;
+                    height: 8rem;
                     grid-column: 2;
                 }
             }
