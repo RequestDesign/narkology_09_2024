@@ -24,6 +24,34 @@
             & .tl1 {
                 margin-bottom: 3rem;
             }
+
+            & h2 {
+                font-family: 'Euclid Circular A';
+                font-weight: 500;
+                font-size: 4rem;
+                line-height: 120%;
+
+                @include small-tablet {
+                    font-size: 5.4rem;
+                }
+            }
+
+            & p {
+                font-family: 'Gilroy';
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 140%;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                }
+            }
+            & ul {
+                padding-left: 3rem;
+                & li{
+                    list-style-image: url(./assets/images/icons/dot.svg);
+                }
+            }
         }
 
     }
