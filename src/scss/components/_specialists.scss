@@ -40,14 +40,19 @@
 
                 & a {
                     position: relative;
+                    width: 47rem;
+                    height: 53rem;
+                    display: flex;
+                    @include small-tablet{
+                        width: 100%;
+                        height: 80rem;
+                    }
 
                     & img {
                         border-radius: 3rem;
-                        min-width: 100%;
-                        max-width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                        object-position: center;
+                 
+                        object-fit: cover;
+                
 
                     }
 
