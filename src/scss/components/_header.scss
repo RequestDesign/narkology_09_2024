@@ -33,6 +33,7 @@
         &-contacts{
             display: flex;
             gap: 1rem;
+            align-items: center;
         }
 
         &-open-btn {
@@ -279,6 +280,20 @@
 
             }
         }
+        &-wa{
+            background-color: transparent;
+            background-image: url(./assets/images/icons/wa.svg);
+            background-position: center;
+            background-size: cover;
+            height: fit-content;
+            width: 4.5rem;
+            height: 4.5rem;
+            @include small-tablet{
+                width: 9rem;
+                height: 9rem;
+            }
+        }
+        
 
         &-service-desk {
             display: none;
