@@ -7,3 +7,21 @@
 @import './marked-list';
 @import './checked-list';
 @import './side-box';
+
+
+.fancybox__container {
+    backdrop-filter: 1rem;
+    -webkit-backdrop-filter: 1rem;
+    --fancybox-bg: rgba(25, 31, 43, 0.8);
+
+}
+
+.fancybox__toolbar {
+    --f-button-bg: rgba(25, 31, 43, 0.8);
+    --f-button-hover-bg: rgba(25, 31, 43, 0.8);
+    --f-button-active-bg: rgba(25, 31, 43, 0.8);
+}
+
+*[data-fancybox] {
+    cursor: zoom-in;
+}

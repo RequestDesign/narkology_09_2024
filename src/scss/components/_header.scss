@@ -30,6 +30,10 @@
         @include small-tablet {
             grid-template-columns: repeat(3, auto);
         }
+        &-contacts{
+            display: flex;
+            gap: 1rem;
+        }
 
         &-open-btn {
             display: none;
@@ -130,6 +134,8 @@
 
         &-list {
             width: 100%;
+            display: flex;
+            align-items: center;
 
             @include small-tablet {
                 display: none;
