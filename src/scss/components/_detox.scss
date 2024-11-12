@@ -22,7 +22,7 @@
             }
 
             &-e {
-                width: fit-content;
+                width: 30%;
                 display: flex;
                 flex-direction: column;
                 gap: 2.4rem;
@@ -51,6 +51,7 @@
             }
             &-arrow{
                 position: relative;
+                margin-top: 2rem;
                 @include small-tablet{
                     height: 6.4rem;
                     width: 6.4rem;
